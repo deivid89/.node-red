@@ -3,13 +3,19 @@
     "description": "Monitoramento da web da subestacao 69",
     "version": "0.0.1",
     "keywords": ["smartnode dashboard","css"],
-    "author": {"David Vieira"},
+    "author": "David Vieira",
     "repository": {
         "type": "git",
-        "url": "da",
-    }
-    "private": true,
-    "dependencies": {
-        "node-red-dashboard": "~3.1.3"
+        "url": "https://github.com/deivid89/.node-red.git"
+    },
+    "licenses":[
+    {
+        "type": "MIT License",
+        "url": "https://opensource.org/licenses/MIT"
+        }
+    ],
+    "devDependencies": {
+        "bootstrap": "4.6.1"
+
     }
 }
