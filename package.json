@@ -3,6 +3,7 @@
     "description": "Monitoramento da web da subestacao 69",
     "version": "0.0.1",
     "keywords": ["smartnode dashboard","css"],
+    "homepage": "https://github.com/deivid89/.node-red",
     "author": "David Vieira",
     "repository": {
         "type": "git",
