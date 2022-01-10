@@ -1,7 +1,13 @@
 {
-    "name": "node-red-project",
-    "description": "A Node-RED Project",
+    "name": "Smart_node_Dashboard",
+    "description": "Monitoramento da web da subestacao 69",
     "version": "0.0.1",
+    "keywords": ["smartnode dashboard","css"],
+    "author": {"David Vieira"},
+    "repository": {
+        "type": "git",
+        "url": "da",
+    }
     "private": true,
     "dependencies": {
         "node-red-dashboard": "~3.1.3"
