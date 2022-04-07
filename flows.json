@@ -1,99 +1,27 @@
 [
     {
-        "id": "159a9d79b8ef992b",
+        "id": "65db87d335e540c4",
         "type": "tab",
-        "label": "SmartNode",
+        "label": "Flow 1",
+        "disabled": true,
+        "info": "",
+        "env": []
+    },
+    {
+        "id": "00676439c2d60620",
+        "type": "tab",
+        "label": "CCK MODBUS",
         "disabled": false,
         "info": "",
         "env": []
     },
     {
-        "id": "aa93ca458181faf5",
-        "type": "modbus-client",
-        "name": "FBS - 60MC - SE69kV",
-        "clienttype": "tcp",
-        "bufferCommands": true,
-        "stateLogEnabled": false,
-        "queueLogEnabled": false,
-        "tcpHost": "192.168.1.3",
-        "tcpPort": "502",
-        "tcpType": "DEFAULT",
-        "serialPort": "/dev/ttyUSB",
-        "serialType": "RTU-BUFFERD",
-        "serialBaudrate": "9600",
-        "serialDatabits": "8",
-        "serialStopbits": "1",
-        "serialParity": "none",
-        "serialConnectionDelay": "100",
-        "serialAsciiResponseStartDelimiter": "0x3A",
-        "unit_id": "1",
-        "commandDelay": "1",
-        "clientTimeout": "1000",
-        "reconnectOnTimeout": true,
-        "reconnectTimeout": "2000",
-        "parallelUnitIdsAllowed": true
-    },
-    {
-        "id": "d60beda15f566b24",
-        "type": "ui_tab",
-        "name": "Gerenciamendo de demandas CCK 6700E",
-        "icon": "Dashboard",
-        "order": 1,
+        "id": "82e99e3d5e52fa12",
+        "type": "tab",
+        "label": "SUB-02 13.8kV",
         "disabled": false,
-        "hidden": false
-    },
-    {
-        "id": "8118e230fcfcbc1b",
-        "type": "ui_tab",
-        "name": "Sepam T69 - S69kV",
-        "icon": "dashboard",
-        "order": 2,
-        "disabled": false,
-        "hidden": false
-    },
-    {
-        "id": "9f0a77ab3f31bf74",
-        "type": "ui_group",
-        "name": "Fator de potencia",
-        "tab": "d60beda15f566b24",
-        "order": 2,
-        "disp": true,
-        "width": 8,
-        "collapse": false,
-        "className": ""
-    },
-    {
-        "id": "aec291222b3aacd3",
-        "type": "ui_group",
-        "name": "Demanda Reativa",
-        "tab": "d60beda15f566b24",
-        "order": 3,
-        "disp": true,
-        "width": "8",
-        "collapse": false,
-        "className": ""
-    },
-    {
-        "id": "c14bcdd0bd5f4674",
-        "type": "ui_group",
-        "name": "Demanda Ativa",
-        "tab": "d60beda15f566b24",
-        "order": 1,
-        "disp": true,
-        "width": 8,
-        "collapse": false,
-        "className": ""
-    },
-    {
-        "id": "ab3c4df214a3bf70",
-        "type": "ui_group",
-        "name": "69kV",
-        "tab": "8118e230fcfcbc1b",
-        "order": 1,
-        "disp": true,
-        "width": "6",
-        "collapse": false,
-        "className": ""
+        "info": "",
+        "env": []
     },
     {
         "id": "026bf07c01c32baf",
@@ -110,7 +38,7 @@
             "darkTheme": {
                 "default": "#097479",
                 "baseColor": "#097479",
-                "baseFont": "-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica Neue,sans-serif",
+                "baseFont": "Arial Black,Arial Black,Gadget,sans-serif",
                 "edited": true,
                 "reset": false
             },
@@ -118,7 +46,8 @@
                 "name": "Untitled Theme 1",
                 "default": "#4B7930",
                 "baseColor": "#4B7930",
-                "baseFont": "-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica Neue,sans-serif"
+                "baseFont": "-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica Neue,sans-serif",
+                "reset": false
             },
             "themeState": {
                 "base-color": {
@@ -163,7 +92,7 @@
                     "edited": false
                 },
                 "base-font": {
-                    "value": "-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica Neue,sans-serif"
+                    "value": "Arial Black,Arial Black,Gadget,sans-serif"
                 }
             },
             "angularTheme": {
@@ -184,495 +113,627 @@
             "sizes": {
                 "sx": 48,
                 "sy": 48,
-                "gx": 60,
-                "gy": 60,
-                "cx": 6,
-                "cy": 6,
+                "gx": 10,
+                "gy": 10,
+                "cx": 3,
+                "cy": 3,
                 "px": 0,
                 "py": 0
             }
         }
     },
     {
-        "id": "111cf2ddf8662d04",
-        "type": "modbus-read",
-        "z": "159a9d79b8ef992b",
-        "name": "Conexão Status Disjuntores SE 69kV",
-        "topic": "",
-        "showStatusActivities": true,
-        "logIOActivities": false,
-        "showErrors": true,
-        "unitid": "1",
-        "dataType": "HoldingRegister",
-        "adr": "51",
-        "quantity": "11",
-        "rate": "1",
-        "rateUnit": "s",
-        "delayOnStart": false,
-        "startDelayTime": "",
-        "server": "aa93ca458181faf5",
-        "useIOFile": false,
-        "ioFile": "",
-        "useIOForPayload": false,
-        "emptyMsgOnFail": true,
-        "x": 150,
-        "y": 740,
-        "wires": [
-            [
-                "837ebe16d27ec8cf"
-            ],
-            []
-        ]
+        "id": "d60beda15f566b24",
+        "type": "ui_tab",
+        "name": "Gerenciamendo de demandas CCK 6700E",
+        "icon": "Dashboard",
+        "order": 1,
+        "disabled": false,
+        "hidden": false
     },
     {
-        "id": "ff4a4b3b3234525f",
-        "type": "debug",
-        "z": "159a9d79b8ef992b",
-        "name": "debug Disj",
-        "active": false,
-        "tosidebar": true,
-        "console": false,
-        "tostatus": false,
-        "complete": "payload",
-        "targetType": "msg",
-        "statusVal": "",
-        "statusType": "auto",
-        "x": 950,
-        "y": 980,
-        "wires": []
+        "id": "9f0a77ab3f31bf74",
+        "type": "ui_group",
+        "name": "Fator de Potencia",
+        "tab": "d60beda15f566b24",
+        "order": 2,
+        "disp": true,
+        "width": "10",
+        "collapse": true,
+        "className": ""
     },
     {
-        "id": "837ebe16d27ec8cf",
+        "id": "aa93ca458181faf5",
+        "type": "modbus-client",
+        "name": "FBS - 60MC - SE69kV",
+        "clienttype": "tcp",
+        "bufferCommands": true,
+        "stateLogEnabled": false,
+        "queueLogEnabled": false,
+        "tcpHost": "172.23.130.77",
+        "tcpPort": "502",
+        "tcpType": "DEFAULT",
+        "serialPort": "/dev/ttyUSB",
+        "serialType": "RTU-BUFFERD",
+        "serialBaudrate": "9600",
+        "serialDatabits": "8",
+        "serialStopbits": "1",
+        "serialParity": "none",
+        "serialConnectionDelay": "100",
+        "serialAsciiResponseStartDelimiter": "0x3A",
+        "unit_id": "1",
+        "commandDelay": "1",
+        "clientTimeout": "1000",
+        "reconnectOnTimeout": true,
+        "reconnectTimeout": "2000",
+        "parallelUnitIdsAllowed": true
+    },
+    {
+        "id": "aec291222b3aacd3",
+        "type": "ui_group",
+        "name": "Demanda Reativa",
+        "tab": "d60beda15f566b24",
+        "order": 3,
+        "disp": true,
+        "width": "9",
+        "collapse": true,
+        "className": ""
+    },
+    {
+        "id": "c14bcdd0bd5f4674",
+        "type": "ui_group",
+        "name": "Demanda Média",
+        "tab": "d60beda15f566b24",
+        "order": 1,
+        "disp": true,
+        "width": "9",
+        "collapse": true,
+        "className": ""
+    },
+    {
+        "id": "8118e230fcfcbc1b",
+        "type": "ui_tab",
+        "name": "Subestação 69kV EntradaTR1",
+        "icon": "dashboard",
+        "order": 2,
+        "disabled": false,
+        "hidden": false
+    },
+    {
+        "id": "ab3c4df214a3bf70",
+        "type": "ui_group",
+        "name": "69kV",
+        "tab": "8118e230fcfcbc1b",
+        "order": 1,
+        "disp": true,
+        "width": "16",
+        "collapse": false,
+        "className": ""
+    },
+    {
+        "id": "ad9b95d4.4d2718",
+        "type": "ui_group",
+        "name": "Default",
+        "tab": "",
+        "order": 4,
+        "disp": true,
+        "width": "6",
+        "collapse": false
+    },
+    {
+        "id": "f2157ba6498170ca",
+        "type": "modbus-client",
+        "name": "CCK 6700E - FLOATINGS ",
+        "clienttype": "tcp",
+        "bufferCommands": true,
+        "stateLogEnabled": false,
+        "queueLogEnabled": false,
+        "tcpHost": "172.23.130.25",
+        "tcpPort": "502",
+        "tcpType": "DEFAULT",
+        "serialPort": "COM5",
+        "serialType": "RTU",
+        "serialBaudrate": "9600",
+        "serialDatabits": "8",
+        "serialStopbits": "1",
+        "serialParity": "none",
+        "serialConnectionDelay": "100",
+        "serialAsciiResponseStartDelimiter": "0x3A",
+        "unit_id": "1",
+        "commandDelay": "1",
+        "clientTimeout": "1500",
+        "reconnectOnTimeout": true,
+        "reconnectTimeout": "2000",
+        "parallelUnitIdsAllowed": true
+    },
+    {
+        "id": "f6e724eca75d672c",
+        "type": "ui_group",
+        "name": "Corrente entrada do TR1 69kV",
+        "tab": "d60beda15f566b24",
+        "order": 4,
+        "disp": true,
+        "width": "7",
+        "collapse": true,
+        "className": ""
+    },
+    {
+        "id": "89749fb7.87f01",
+        "type": "ui_group",
+        "name": "Charts",
+        "tab": "d7901f40.2659d",
+        "order": 2,
+        "disp": false,
+        "width": "6"
+    },
+    {
+        "id": "ab397e95.29ebe",
+        "type": "ui_group",
+        "name": "Inputs",
+        "tab": "d7901f40.2659d",
+        "order": 1,
+        "disp": false,
+        "width": "6"
+    },
+    {
+        "id": "4e7edda4.417004",
+        "type": "ui_group",
+        "name": "Group 3",
+        "tab": "d7901f40.2659d",
+        "order": 3,
+        "disp": false,
+        "width": "6"
+    },
+    {
+        "id": "d7901f40.2659d",
+        "type": "ui_tab",
+        "name": "Charts",
+        "icon": "dashboard",
+        "order": 3
+    },
+    {
+        "id": "8fb259e231b967ad",
+        "type": "ui_group",
+        "name": "Perfil de Consumo Diário",
+        "tab": "d60beda15f566b24",
+        "order": 5,
+        "disp": true,
+        "width": "20",
+        "collapse": true,
+        "className": ""
+    },
+    {
+        "id": "5165c15f737af23d",
+        "type": "modbus-client",
+        "name": "",
+        "clienttype": "tcp",
+        "bufferCommands": true,
+        "stateLogEnabled": true,
+        "tcpHost": "127.0.0.1",
+        "tcpPort": "502",
+        "tcpType": "DEFAULT",
+        "serialPort": "/dev/ttyUSB",
+        "serialType": "RTU-BUFFERD",
+        "serialBaudrate": "9600",
+        "serialDatabits": "8",
+        "serialStopbits": "1",
+        "serialParity": "none",
+        "serialConnectionDelay": "100",
+        "unit_id": 1,
+        "commandDelay": 1,
+        "clientTimeout": 1000,
+        "reconnectTimeout": 2000
+    },
+    {
+        "id": "ba6eed8b3f69bd10",
+        "type": "ui_spacer",
+        "z": "00676439c2d60620",
+        "name": "spacer",
+        "group": "0d99910a5914b7a2",
+        "order": 2,
+        "width": 1,
+        "height": 1
+    },
+    {
+        "id": "b164eff9efcebe4f",
+        "type": "ui_spacer",
+        "z": "00676439c2d60620",
+        "name": "spacer",
+        "group": "ab3c4df214a3bf70",
+        "order": 1,
+        "width": 1,
+        "height": 1
+    },
+    {
+        "id": "d1660fd088b91af6",
+        "type": "ui_group",
+        "name": "Pie Chart",
+        "tab": "d60beda15f566b24",
+        "order": 6,
+        "disp": true,
+        "width": 8,
+        "collapse": true,
+        "className": ""
+    },
+    {
+        "id": "8c9880861bc783ad",
+        "type": "ui_group",
+        "name": "teste",
+        "tab": "d60beda15f566b24",
+        "order": 7,
+        "disp": true,
+        "width": "8",
+        "collapse": true,
+        "className": ""
+    },
+    {
+        "id": "bd76244830407168",
+        "type": "ui_tab",
+        "name": "SUB-02 13.8kV",
+        "icon": "dashboard",
+        "order": 4,
+        "disabled": false,
+        "hidden": false
+    },
+    {
+        "id": "2dba1318b451a92a",
+        "type": "ui_spacer",
+        "z": "00676439c2d60620",
+        "name": "spacer",
+        "group": "c14bcdd0bd5f4674",
+        "order": 2,
+        "width": 1,
+        "height": 1
+    },
+    {
+        "id": "a34792fdc40f8f97",
+        "type": "ui_spacer",
+        "z": "00676439c2d60620",
+        "name": "spacer",
+        "group": "c14bcdd0bd5f4674",
+        "order": 3,
+        "width": 1,
+        "height": 1
+    },
+    {
+        "id": "8d6f5f229f879547",
+        "type": "ui_spacer",
+        "z": "00676439c2d60620",
+        "name": "spacer",
+        "group": "c14bcdd0bd5f4674",
+        "order": 4,
+        "width": 1,
+        "height": 1
+    },
+    {
+        "id": "f3395b40cee868f5",
+        "type": "ui_spacer",
+        "z": "00676439c2d60620",
+        "name": "spacer",
+        "group": "c14bcdd0bd5f4674",
+        "order": 5,
+        "width": 1,
+        "height": 1
+    },
+    {
+        "id": "0fd890b6bf669647",
+        "type": "ui_spacer",
+        "z": "00676439c2d60620",
+        "name": "spacer",
+        "group": "c14bcdd0bd5f4674",
+        "order": 7,
+        "width": 1,
+        "height": 1
+    },
+    {
+        "id": "44363c697d04a3dc",
+        "type": "ui_spacer",
+        "z": "00676439c2d60620",
+        "name": "spacer",
+        "group": "c14bcdd0bd5f4674",
+        "order": 8,
+        "width": 1,
+        "height": 1
+    },
+    {
+        "id": "a322adcae48e88d4",
+        "type": "ui_spacer",
+        "z": "00676439c2d60620",
+        "name": "spacer",
+        "group": "c14bcdd0bd5f4674",
+        "order": 9,
+        "width": 1,
+        "height": 1
+    },
+    {
+        "id": "e21b77addd7d0f91",
+        "type": "ui_spacer",
+        "z": "00676439c2d60620",
+        "name": "spacer",
+        "group": "c14bcdd0bd5f4674",
+        "order": 10,
+        "width": 1,
+        "height": 1
+    },
+    {
+        "id": "a9f54e1bd751d986",
+        "type": "ui_spacer",
+        "z": "00676439c2d60620",
+        "name": "spacer",
+        "group": "9f0a77ab3f31bf74",
+        "order": 2,
+        "width": 1,
+        "height": 1
+    },
+    {
+        "id": "030ea30f8e825871",
+        "type": "ui_spacer",
+        "z": "00676439c2d60620",
+        "name": "spacer",
+        "group": "9f0a77ab3f31bf74",
+        "order": 3,
+        "width": 1,
+        "height": 1
+    },
+    {
+        "id": "0638b1a9aa661aa6",
+        "type": "ui_spacer",
+        "z": "00676439c2d60620",
+        "name": "spacer",
+        "group": "9f0a77ab3f31bf74",
+        "order": 4,
+        "width": 1,
+        "height": 1
+    },
+    {
+        "id": "37ae59b45f3f688e",
+        "type": "ui_spacer",
+        "z": "00676439c2d60620",
+        "name": "spacer",
+        "group": "9f0a77ab3f31bf74",
+        "order": 5,
+        "width": 1,
+        "height": 1
+    },
+    {
+        "id": "e2849693379440e2",
+        "type": "ui_spacer",
+        "z": "00676439c2d60620",
+        "name": "spacer",
+        "group": "9f0a77ab3f31bf74",
+        "order": 7,
+        "width": 1,
+        "height": 1
+    },
+    {
+        "id": "8dc272b5a002b9d3",
+        "type": "ui_spacer",
+        "z": "00676439c2d60620",
+        "name": "spacer",
+        "group": "9f0a77ab3f31bf74",
+        "order": 8,
+        "width": 1,
+        "height": 1
+    },
+    {
+        "id": "8bae5b6c714c078f",
+        "type": "ui_spacer",
+        "z": "00676439c2d60620",
+        "name": "spacer",
+        "group": "9f0a77ab3f31bf74",
+        "order": 9,
+        "width": 1,
+        "height": 1
+    },
+    {
+        "id": "147589404cf7db90",
+        "type": "ui_spacer",
+        "z": "00676439c2d60620",
+        "name": "spacer",
+        "group": "9f0a77ab3f31bf74",
+        "order": 10,
+        "width": 1,
+        "height": 1
+    },
+    {
+        "id": "96b43de30a9b60a2",
+        "type": "ui_spacer",
+        "z": "00676439c2d60620",
+        "name": "spacer",
+        "group": "aec291222b3aacd3",
+        "order": 2,
+        "width": 1,
+        "height": 1
+    },
+    {
+        "id": "da63c4705861fba0",
+        "type": "ui_spacer",
+        "z": "00676439c2d60620",
+        "name": "spacer",
+        "group": "aec291222b3aacd3",
+        "order": 3,
+        "width": 1,
+        "height": 1
+    },
+    {
+        "id": "7905c573aac69133",
+        "type": "ui_spacer",
+        "z": "00676439c2d60620",
+        "name": "spacer",
+        "group": "aec291222b3aacd3",
+        "order": 4,
+        "width": 1,
+        "height": 1
+    },
+    {
+        "id": "6610334e0c8a1bcb",
+        "type": "ui_spacer",
+        "z": "00676439c2d60620",
+        "name": "spacer",
+        "group": "aec291222b3aacd3",
+        "order": 5,
+        "width": 1,
+        "height": 1
+    },
+    {
+        "id": "b7b17efe2078417c",
+        "type": "ui_spacer",
+        "z": "00676439c2d60620",
+        "name": "spacer",
+        "group": "aec291222b3aacd3",
+        "order": 7,
+        "width": 1,
+        "height": 1
+    },
+    {
+        "id": "46385145e1d6a5d0",
+        "type": "ui_spacer",
+        "z": "00676439c2d60620",
+        "name": "spacer",
+        "group": "aec291222b3aacd3",
+        "order": 8,
+        "width": 1,
+        "height": 1
+    },
+    {
+        "id": "98dbe1f2c2e44a07",
+        "type": "ui_spacer",
+        "z": "00676439c2d60620",
+        "name": "spacer",
+        "group": "aec291222b3aacd3",
+        "order": 9,
+        "width": 1,
+        "height": 1
+    },
+    {
+        "id": "90e7f3b77fbcfc3e",
+        "type": "ui_spacer",
+        "z": "00676439c2d60620",
+        "name": "spacer",
+        "group": "aec291222b3aacd3",
+        "order": 10,
+        "width": 1,
+        "height": 1
+    },
+    {
+        "id": "e62055e3a362cb2f",
+        "type": "ui_group",
+        "name": "Demanda Média SUB-02 13.8kV",
+        "tab": "bd76244830407168",
+        "order": 1,
+        "disp": true,
+        "width": 9,
+        "collapse": false,
+        "className": ""
+    },
+    {
+        "id": "58ae76d6d77672d4",
+        "type": "ui_group",
+        "name": "Demanda Reativa SUB-02 13.8kV",
+        "tab": "bd76244830407168",
+        "order": 3,
+        "disp": true,
+        "width": 9,
+        "collapse": false,
+        "className": ""
+    },
+    {
+        "id": "1cba8527517310d3",
+        "type": "ui_group",
+        "name": "Fator de Potência SUB-02 13.8kV",
+        "tab": "bd76244830407168",
+        "order": 2,
+        "disp": true,
+        "width": 10,
+        "collapse": false,
+        "className": ""
+    },
+    {
+        "id": "075c74cb1166289e",
+        "type": "ui_group",
+        "name": "Perfil de Consumo Diário SUB-02 13.8kV",
+        "tab": "bd76244830407168",
+        "order": 4,
+        "disp": true,
+        "width": "20",
+        "collapse": false,
+        "className": ""
+    },
+    {
+        "id": "ad7055a2cb85ebf3",
+        "type": "ui_group",
+        "name": "Pie Chart SUB-02 13.8kV",
+        "tab": "bd76244830407168",
+        "order": 5,
+        "disp": true,
+        "width": "8",
+        "collapse": false,
+        "className": ""
+    },
+    {
+        "id": "da4b7930f2d18c4a",
+        "type": "ui_group",
+        "name": "",
+        "tab": "bd76244830407168",
+        "order": 6,
+        "disp": true,
+        "width": "8",
+        "collapse": false,
+        "className": ""
+    },
+    {
+        "id": "82ad909e9478099e",
+        "type": "ui_spacer",
+        "z": "82e99e3d5e52fa12",
+        "name": "spacer",
+        "group": "da4b7930f2d18c4a",
+        "order": 6,
+        "width": "2",
+        "height": "4"
+    },
+    {
+        "id": "f3bf6bf82d4fb209",
         "type": "function",
-        "z": "159a9d79b8ef992b",
-        "name": "Status_Disjuntores",
-        "func": "var payload = msg.payload;\n// Status do Disjuntor(52.20) de Saída do transformador 03 - TR3\nif (msg.payload[0] == \"0\"){\n    payload[0] = \"Falha de comunicaçãoT\";\n    }\n    if (payload[0] == \"1\"){\n        payload[0] = \"Ligado\";\n        }\n        if (payload[0] == \"2\"){\n            payload[0] = \"Desligado\";\n            }\n\n//Status do Disjuntor(52.21) de Saída 05 do transformador 03 - TR3\nif (msg.payload[1] == \"0\"){\n    payload[1] = \"Falha de comunicaçãoT\";\n    }\n    if (payload[1] == \"1\"){\n        payload[1] = \"Ligado\";\n        }\n        if (payload[1] == \"2\"){\n            payload[1] = \"Desligado\";\n            }\n\n//Status do Disjuntor(52.22) de Saída 06 do transformador 03 - TR3\nif (msg.payload[2] == \"0\"){\n    payload[2] = \"Falha de comunicaçãoT\";\n    }\n    if (payload[2] == \"1\"){\n        payload[2] = \"Ligado\";\n        }\n        if (payload[2] == \"2\"){\n            payload[2] = \"Desligado\";\n            }\n\n//Status do Disjuntor(52.2) de Saída do transformador 01 - TR1: \nif (msg.payload[3] == \"0\"){\n    payload[3] = \"Falha de comunicaçãoT\";\n    }\n    if (payload[3] == \"1\"){\n        payload[3] = \"Ligado\";\n        }\n        if (payload[3] == \"2\"){\n            payload[3] = \"Desligado\";\n            }\n\n//Status do Disjuntor(52.3) de Saída do transformador 02 - TR2: \nif (msg.payload[4] == \"0\"){\n    payload[4] = \"Falha de comunicaçãoT\";\n    }\n    if (payload[4] == \"1\"){\n        payload[4] = \"Ligado\";\n        }\n        if (payload[4] == \"2\"){\n            payload[4] = \"Desligado\";\n            }\n\n//Status do Disjuntor(52.4) de Saída 01 do transformador 01 - TR1:  \nif (msg.payload[5] == \"0\"){\n    payload[5] = \"Falha de comunicaçãoT\";\n    }\n    if (payload[5] == \"1\"){\n        payload[5] = \"Ligado\";\n        }\n        if (payload[5] == \"2\"){\n            payload[5] = \"Desligado\";\n        }\n\n//Status do Disjuntor(52.5) de Saída 02 do transformador 02 - TR2:   \nif (msg.payload[6] == \"0\"){\n    payload[6] = \"Falha de comunicaçãoT\";\n    }\n    if (payload[6] == \"1\"){\n        payload[6] = \"Ligado\";\n        }\n        if (payload[6] == \"2\"){\n            payload[6] = \"Desligado\";\n            }\n\n//Status do Disjuntor(52.7) de Saída 04 do transformador 02 - TR2:  \nif (msg.payload[7] == \"0\"){\n    payload[7] = \"Falha de comunicaçãoT\";\n    }\n    if (payload[7] == \"1\"){\n        payload[7] = \"Ligado\";\n        }\n        if (payload[7] == \"2\"){\n            payload[7] = \"Desligado\";\n            }\n\n//Status do Disjuntor(52.8) de Saída 03 do transformador 02 - TR2:  \nif (msg.payload[8] == \"0\"){\n    payload[8] = \"Falha de comunicaçãoT\";\n    }\n    if (payload[8] == \"1\"){\n        payload[8] = \"Ligado\";\n        }\n        if (payload[8] == \"2\"){\n            payload[8] = \"Desligado\";\n            }\n\n//Status do Disjuntor(52.23): Tala entre transformador 03 - TR3 e transformador 01 - TR1:\nif (msg.payload[9] == \"0\"){\n    payload[9] = \"Falha de comunicaçãoT\";\n    }\n    if (payload[9] == \"1\"){\n        payload[9] = \"Ligado\";\n        }\n        if (payload[9] == \"2\"){\n            payload[9] = \"Desligado\";\n            }\n\n//Status do Disjuntor(52.23): Tala entre transformador 03 - TR3 e transformador 01 - TR1:\nif (msg.payload[10] == \"0\"){\n    payload[10] = \"Falha de comunicaçãoT\";\n    }\n    if (payload[10] == \"1\"){\n        payload[10] = \"Ligado\";\n        }\n        if (payload[10] == \"2\"){\n            payload[10] = \"Desligado\";\n            }\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nmsg.payload[0] = (payload[0]);//Status do Disjuntor(52.20)\nmsg.payload[1] = (payload[1]);//Status do Disjuntor(52.21)\nmsg.payload[2] = (payload[2]);//Status do Disjuntor(52.22)\nmsg.payload[3] = (payload[3]);//Status do Disjuntor(52.02)\nmsg.payload[4] = (payload[4]);//Status do Disjuntor(52.03)\nmsg.payload[5] = (payload[5]);//Status do Disjuntor(52.04)\nmsg.payload[6] = (payload[6]);//Status do Disjuntor(52.05)\nmsg.payload[7] = (payload[7]);//Status do Disjuntor(52.07)\nmsg.payload[8] = (payload[8]);//Status do Disjuntor(52.08)\nmsg.payload[9] = (payload[9]);//Status do Disjuntor(52.23)\nmsg.payload[10] = (payload[10]);//Status do Disjuntor(52.23)\n\nreturn msg;",
+        "z": "65db87d335e540c4",
+        "name": "",
+        "func": "var m={};\nm.labels = [\"January\", \"February\", \"March\", \"April\", \"May\", \"June\", \"July\"];\nm.series = ['Series A', 'Series B', 'Series C'];\nm.data = [\n    [65, 59, 80, 81, 56, 55, 40],\n    [28, 48, 40, 19, 86, 27, 90],\n    [38, 28, 20, 49, 45, 60, 20]\n  ];\nreturn {payload:[m]};",
         "outputs": 1,
         "noerr": 0,
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 530,
-        "y": 740,
-        "wires": [
-            [
-                "f70d2133038c71b9",
-                "8514edc112de61f8",
-                "98f1887d56d7b835",
-                "5250eecc4db04c25",
-                "60719418bc20d461",
-                "c14dc682a8bbe3a5",
-                "930aaa893450ce82",
-                "5da2f5b9b57f51a0",
-                "6f6e9c5ab00e7064",
-                "e31b97320185c85a",
-                "82a81e526d8b7688",
-                "ff4a4b3b3234525f"
-            ]
-        ]
-    },
-    {
-        "id": "3ee6033e6dc13837",
-        "type": "comment",
-        "z": "159a9d79b8ef992b",
-        "name": "Status disjuntores tripolar da SE 69kV",
-        "info": "Status disjuntores tripolar da SE 69kV",
-        "x": 450,
-        "y": 600,
-        "wires": []
-    },
-    {
-        "id": "54643c9669ae5616",
-        "type": "modbus-read",
-        "z": "159a9d79b8ef992b",
-        "name": "Medidor PowerLogic PM5110",
-        "topic": "",
-        "showStatusActivities": true,
-        "logIOActivities": false,
-        "showErrors": true,
-        "unitid": "1",
-        "dataType": "HoldingRegister",
-        "adr": "6000",
-        "quantity": "5",
-        "rate": "1",
-        "rateUnit": "s",
-        "delayOnStart": false,
-        "startDelayTime": "",
-        "server": "aa93ca458181faf5",
-        "useIOFile": false,
-        "ioFile": "",
-        "useIOForPayload": false,
-        "emptyMsgOnFail": true,
-        "x": 120,
-        "y": 260,
-        "wires": [
-            [
-                "5aa9e6bf998d8ff2",
-                "c5fc1c95845cf582",
-                "c3b4cc518652d7ac"
-            ],
-            []
-        ]
-    },
-    {
-        "id": "5aa9e6bf998d8ff2",
-        "type": "function",
-        "z": "159a9d79b8ef992b",
-        "name": "Pot Ativa Total 69kV",
-        "func": "var payload = msg.payload;\nmsg.payload = (payload[0]);\nreturn msg;",
-        "outputs": 1,
-        "noerr": 0,
-        "initialize": "",
-        "finalize": "",
-        "libs": [],
-        "x": 480,
-        "y": 100,
-        "wires": [
-            [
-                "f78dd1389096bd0f",
-                "eeea8627d331deaf"
-            ]
-        ]
-    },
-    {
-        "id": "c5fc1c95845cf582",
-        "type": "function",
-        "z": "159a9d79b8ef992b",
-        "name": "Fator de potencia 69kV",
-        "func": "var payload = msg.payload;\nmsg.payload = (payload[1]);\nreturn msg;",
-        "outputs": 1,
-        "noerr": 0,
-        "initialize": "",
-        "finalize": "",
-        "libs": [],
-        "x": 490,
-        "y": 260,
-        "wires": [
-            [
-                "135ad2249a42896d",
-                "61eefc740025cf9f"
-            ]
-        ]
-    },
-    {
-        "id": "c3b4cc518652d7ac",
-        "type": "function",
-        "z": "159a9d79b8ef992b",
-        "name": "Pot Reativa Total 69kV",
-        "func": "var payload = msg.payload;\nmsg.payload = (payload[2]);\nreturn msg;",
-        "outputs": 1,
-        "noerr": 0,
-        "initialize": "",
-        "finalize": "",
-        "libs": [],
-        "x": 480,
+        "x": 360,
         "y": 400,
         "wires": [
             [
-                "0580bc7370bfef9e",
-                "a4029750d703f50f"
+                "d53d624ac208622b",
+                "6540d95249eaf31b",
+                "b7acbf62a0ae97f1",
+                "03fd035980712d7d"
             ]
         ]
     },
     {
-        "id": "0f92a3aee420cf84",
-        "type": "comment",
-        "z": "159a9d79b8ef992b",
-        "name": "Leitura de Energia da Subestação 69KV - Medidor PowerLogic PM5110 ",
-        "info": "Leitura de Energia da Subestação 69KV - Medidor PowerLogic PM5110 ",
-        "x": 350,
-        "y": 60,
-        "wires": []
-    },
-    {
-        "id": "f70d2133038c71b9",
-        "type": "ui_text",
-        "z": "159a9d79b8ef992b",
-        "group": "ab3c4df214a3bf70",
-        "order": 1,
-        "width": 0,
-        "height": 0,
-        "name": "",
-        "label": "52.20",
-        "format": "{{msg.payload[0]}}",
-        "layout": "row-spread",
-        "className": "",
-        "x": 930,
-        "y": 540,
-        "wires": []
-    },
-    {
-        "id": "8514edc112de61f8",
-        "type": "ui_text",
-        "z": "159a9d79b8ef992b",
-        "group": "ab3c4df214a3bf70",
-        "order": 1,
-        "width": 0,
-        "height": 0,
-        "name": "",
-        "label": "52.21",
-        "format": "{{msg.payload[1]}}",
-        "layout": "row-spread",
-        "className": "",
-        "x": 930,
-        "y": 580,
-        "wires": []
-    },
-    {
-        "id": "98f1887d56d7b835",
-        "type": "ui_text",
-        "z": "159a9d79b8ef992b",
-        "group": "ab3c4df214a3bf70",
-        "order": 1,
-        "width": 0,
-        "height": 0,
-        "name": "",
-        "label": "52.22",
-        "format": "{{msg.payload[2]}}",
-        "layout": "row-spread",
-        "className": "",
-        "x": 930,
-        "y": 620,
-        "wires": []
-    },
-    {
-        "id": "5250eecc4db04c25",
-        "type": "ui_text",
-        "z": "159a9d79b8ef992b",
-        "group": "ab3c4df214a3bf70",
-        "order": 1,
-        "width": 0,
-        "height": 0,
-        "name": "",
-        "label": "52.02",
-        "format": "{{msg.payload[3]}}",
-        "layout": "row-spread",
-        "className": "",
-        "x": 930,
-        "y": 660,
-        "wires": []
-    },
-    {
-        "id": "60719418bc20d461",
-        "type": "ui_text",
-        "z": "159a9d79b8ef992b",
-        "group": "ab3c4df214a3bf70",
-        "order": 1,
-        "width": 0,
-        "height": 0,
-        "name": "",
-        "label": "52.03",
-        "format": "{{msg.payload[4]}}",
-        "layout": "row-spread",
-        "className": "",
-        "x": 930,
-        "y": 700,
-        "wires": []
-    },
-    {
-        "id": "c14dc682a8bbe3a5",
-        "type": "ui_text",
-        "z": "159a9d79b8ef992b",
-        "group": "ab3c4df214a3bf70",
-        "order": 1,
-        "width": 0,
-        "height": 0,
-        "name": "",
-        "label": "52.04",
-        "format": "{{msg.payload[5]}}",
-        "layout": "row-spread",
-        "className": "",
-        "x": 930,
-        "y": 740,
-        "wires": []
-    },
-    {
-        "id": "930aaa893450ce82",
-        "type": "ui_text",
-        "z": "159a9d79b8ef992b",
-        "group": "ab3c4df214a3bf70",
-        "order": 1,
-        "width": 0,
-        "height": 0,
-        "name": "",
-        "label": "52.06",
-        "format": "{{msg.payload[6]}}",
-        "layout": "row-spread",
-        "className": "",
-        "x": 930,
-        "y": 780,
-        "wires": []
-    },
-    {
-        "id": "5da2f5b9b57f51a0",
-        "type": "ui_text",
-        "z": "159a9d79b8ef992b",
-        "group": "ab3c4df214a3bf70",
-        "order": 1,
-        "width": 0,
-        "height": 0,
-        "name": "",
-        "label": "52.07",
-        "format": "{{msg.payload[7]}}",
-        "layout": "row-spread",
-        "className": "",
-        "x": 930,
-        "y": 820,
-        "wires": []
-    },
-    {
-        "id": "6f6e9c5ab00e7064",
-        "type": "ui_text",
-        "z": "159a9d79b8ef992b",
-        "group": "ab3c4df214a3bf70",
-        "order": 1,
-        "width": 0,
-        "height": 0,
-        "name": "",
-        "label": "52.08",
-        "format": "{{msg.payload[8]}}",
-        "layout": "row-spread",
-        "className": "",
-        "x": 930,
-        "y": 860,
-        "wires": []
-    },
-    {
-        "id": "e31b97320185c85a",
-        "type": "ui_text",
-        "z": "159a9d79b8ef992b",
-        "group": "ab3c4df214a3bf70",
-        "order": 1,
-        "width": 0,
-        "height": 0,
-        "name": "",
-        "label": "52.23",
-        "format": "{{msg.payload[9]}}",
-        "layout": "row-spread",
-        "className": "",
-        "x": 930,
-        "y": 900,
-        "wires": []
-    },
-    {
-        "id": "82a81e526d8b7688",
-        "type": "ui_text",
-        "z": "159a9d79b8ef992b",
-        "group": "ab3c4df214a3bf70",
-        "order": 1,
-        "width": 0,
-        "height": 0,
-        "name": "",
-        "label": "52.06",
-        "format": "{{msg.payload[10]}}",
-        "layout": "row-spread",
-        "className": "",
-        "x": 930,
-        "y": 940,
-        "wires": []
-    },
-    {
-        "id": "eeea8627d331deaf",
-        "type": "ui_gauge",
-        "z": "159a9d79b8ef992b",
-        "name": "",
-        "group": "c14bcdd0bd5f4674",
-        "order": 1,
-        "width": "8",
-        "height": "4",
-        "gtype": "gage",
-        "title": "",
-        "label": "KwVAR",
-        "format": "{{value}}",
-        "min": 0,
-        "max": "7620",
-        "colors": [
-            "#c2c7c2",
-            "#4ad723",
-            "#ff0000"
-        ],
-        "seg1": "3500",
-        "seg2": "5000",
-        "className": "",
-        "x": 750,
-        "y": 140,
-        "wires": []
-    },
-    {
-        "id": "a4029750d703f50f",
-        "type": "ui_gauge",
-        "z": "159a9d79b8ef992b",
-        "name": "",
-        "group": "aec291222b3aacd3",
-        "order": 1,
-        "width": "8",
-        "height": "4",
-        "gtype": "gage",
-        "title": "",
-        "label": "KwVAR",
-        "format": "{{value}}",
-        "min": 0,
-        "max": "8000",
-        "colors": [
-            "#c2c7c2",
-            "#4ad723",
-            "#ff0000"
-        ],
-        "seg1": "3500",
-        "seg2": "5000",
-        "className": "",
-        "x": 750,
-        "y": 440,
-        "wires": []
-    },
-    {
-        "id": "61eefc740025cf9f",
-        "type": "ui_gauge",
-        "z": "159a9d79b8ef992b",
-        "name": "",
-        "group": "9f0a77ab3f31bf74",
-        "order": 1,
-        "width": "8",
-        "height": "4",
-        "gtype": "gage",
-        "title": "",
-        "label": "FB",
-        "format": "{{value}}",
-        "min": 0,
-        "max": "1.65",
-        "colors": [
-            "#e21d27",
-            "#4ad723",
-            "#ff0000"
-        ],
-        "seg1": "0.85",
-        "seg2": "1.1",
-        "className": "",
-        "x": 750,
-        "y": 300,
-        "wires": []
-    },
-    {
-        "id": "f78dd1389096bd0f",
+        "id": "d53d624ac208622b",
         "type": "ui_chart",
-        "z": "159a9d79b8ef992b",
+        "z": "65db87d335e540c4",
         "name": "",
-        "group": "c14bcdd0bd5f4674",
-        "order": 2,
-        "width": "8",
-        "height": "4",
-        "label": "chart",
+        "group": "89749fb7.87f01",
+        "order": 1,
+        "width": 0,
+        "height": 0,
+        "label": "line chart",
         "chartType": "line",
         "legend": "false",
-        "xformat": "HH:mm:ss",
+        "xformat": "auto",
         "interpolate": "linear",
-        "nodata": "",
+        "nodata": "No Data",
         "dot": false,
-        "ymin": "0",
-        "ymax": "8000",
-        "removeOlder": "15",
+        "ymin": "",
+        "ymax": "",
+        "removeOlder": 1,
         "removeOlderPoints": "",
-        "removeOlderUnit": "60",
+        "removeOlderUnit": "3600",
         "cutout": 0,
         "useOneColor": false,
         "useUTC": false,
@@ -690,21 +751,919 @@
         "outputs": 1,
         "useDifferentColor": false,
         "className": "",
-        "x": 750,
-        "y": 60,
+        "x": 630,
+        "y": 140,
         "wires": [
             []
         ]
     },
     {
-        "id": "0580bc7370bfef9e",
+        "id": "3dfdc1e852c2fc4e",
+        "type": "function",
+        "z": "65db87d335e540c4",
+        "name": "",
+        "func": "var chart = [{\n    \"series\":[\"A\",\"B\",\"C\"],\n    \"data\":[[{\"x\":1504029632890,\"y\":5},{\"x\":1504029636001,\"y\":4},{\"x\":1504029638656,\"y\":2}],[{\"x\":1504029633514,\"y\":6},{\"x\":1504029636622,\"y\":7},{\"x\":1504029639539,\"y\":6}],[{\"x\":1504029634400,\"y\":7},{\"x\":1504029637959,\"y\":9},{\"x\":1504029640317,\"y\":7}]],\n    \"labels\":[\"\"]\n}];\nmsg.payload = chart;\n\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "x": 360,
+        "y": 240,
+        "wires": [
+            [
+                "d53d624ac208622b"
+            ]
+        ]
+    },
+    {
+        "id": "c7f74267919e3fba",
+        "type": "ui_button",
+        "z": "65db87d335e540c4",
+        "name": "",
+        "group": "ab397e95.29ebe",
+        "order": 1,
+        "width": 0,
+        "height": 0,
+        "passthru": false,
+        "label": "Time Line 1",
+        "color": "",
+        "bgcolor": "",
+        "icon": "",
+        "payload": "",
+        "payloadType": "str",
+        "topic": "",
+        "x": 220,
+        "y": 240,
+        "wires": [
+            [
+                "3dfdc1e852c2fc4e"
+            ]
+        ]
+    },
+    {
+        "id": "6540d95249eaf31b",
         "type": "ui_chart",
-        "z": "159a9d79b8ef992b",
+        "z": "65db87d335e540c4",
+        "name": "",
+        "group": "89749fb7.87f01",
+        "order": 2,
+        "width": 0,
+        "height": 0,
+        "label": "bar chart",
+        "chartType": "bar",
+        "legend": "false",
+        "xformat": "HH:mm:ss",
+        "interpolate": "linear",
+        "nodata": "No Data",
+        "dot": false,
+        "ymin": "",
+        "ymax": "",
+        "removeOlder": 1,
+        "removeOlderPoints": "",
+        "removeOlderUnit": "3600",
+        "cutout": 0,
+        "useOneColor": false,
+        "useUTC": false,
+        "colors": [
+            "#1f77b4",
+            "#aec7e8",
+            "#ff7f0e",
+            "#2ca02c",
+            "#98df8a",
+            "#d62728",
+            "#ff9896",
+            "#9467bd",
+            "#c5b0d5"
+        ],
+        "outputs": 1,
+        "useDifferentColor": false,
+        "className": "",
+        "x": 630,
+        "y": 200,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "535d14596cb59e18",
+        "type": "ui_button",
+        "z": "65db87d335e540c4",
+        "name": "",
+        "group": "ab397e95.29ebe",
+        "order": 5,
+        "width": 0,
+        "height": 0,
+        "passthru": false,
+        "label": "array",
+        "tooltip": "",
+        "color": "",
+        "bgcolor": "",
+        "className": "",
+        "icon": "",
+        "payload": "",
+        "payloadType": "str",
+        "topic": "",
+        "topicType": "str",
+        "x": 200,
+        "y": 400,
+        "wires": [
+            [
+                "f3bf6bf82d4fb209"
+            ]
+        ]
+    },
+    {
+        "id": "b05c04dd343ac604",
+        "type": "inject",
+        "z": "65db87d335e540c4",
+        "name": "",
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "topic": "",
+        "payload": "",
+        "payloadType": "str",
+        "x": 220,
+        "y": 600,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "2b31344bdcd038fe",
+        "type": "function",
+        "z": "65db87d335e540c4",
+        "name": "",
+        "func": "var m={};\nm.labels = [10,20,30,40,50,60,70];\nm.series = ['Series A', 'Series B', 'Series C', 'Series D'];\nm.data = [\n    [65, 59, 80, 81, 56, 55, 40],\n    [28, 48, 40, 19, 86, 27, 90],\n    [38, 28, 20, 49, 45, 60, 20],\n    [58, 18, 40, 29, 15, 30, 60]\n  ];\nreturn {payload:[m]};",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 360,
+        "y": 440,
+        "wires": [
+            [
+                "d53d624ac208622b",
+                "6540d95249eaf31b",
+                "b7acbf62a0ae97f1",
+                "03fd035980712d7d"
+            ]
+        ]
+    },
+    {
+        "id": "b5c24d4e92a69f73",
+        "type": "ui_button",
+        "z": "65db87d335e540c4",
+        "name": "",
+        "group": "ab397e95.29ebe",
+        "order": 6,
+        "width": 0,
+        "height": 0,
+        "passthru": false,
+        "label": "array2",
+        "tooltip": "",
+        "color": "",
+        "bgcolor": "",
+        "className": "",
+        "icon": "",
+        "payload": "",
+        "payloadType": "str",
+        "topic": "",
+        "topicType": "str",
+        "x": 200,
+        "y": 440,
+        "wires": [
+            [
+                "2b31344bdcd038fe"
+            ]
+        ]
+    },
+    {
+        "id": "526d8a07ae3bb07f",
+        "type": "function",
+        "z": "65db87d335e540c4",
+        "name": "",
+        "func": "var chart = [{\n    \"series\":[\"A\",\"B\",\"C\"],\n        \"data\":[[{\"x\":1,\"y\":5},{\"x\":2,\"y\":4},{\"x\":3,\"y\":2}],[{\"x\":4,\"y\":6},{\"x\":5,\"y\":7},{\"x\":6,\"y\":6}],[{\"x\":7,\"y\":7},{\"x\":8,\"y\":9},{\"x\":9,\"y\":7}]],\n    \"labels\":[\"\"]\n}];\nmsg.payload = chart;\n\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "x": 360,
+        "y": 280,
+        "wires": [
+            [
+                "d53d624ac208622b"
+            ]
+        ]
+    },
+    {
+        "id": "b8b730b0a4eef9a3",
+        "type": "ui_button",
+        "z": "65db87d335e540c4",
+        "name": "",
+        "group": "ab397e95.29ebe",
+        "order": 2,
+        "width": 0,
+        "height": 0,
+        "passthru": false,
+        "label": "Time Line 2",
+        "color": "",
+        "bgcolor": "",
+        "icon": "",
+        "payload": "",
+        "payloadType": "str",
+        "topic": "",
+        "x": 220,
+        "y": 280,
+        "wires": [
+            [
+                "526d8a07ae3bb07f"
+            ]
+        ]
+    },
+    {
+        "id": "35fa8743b77da60d",
+        "type": "function",
+        "z": "65db87d335e540c4",
+        "name": "",
+        "func": "var m = {};\nm.labels = [\"Download\", \"In-Store\", \"Mail-Order\"];\nm.data = [[300, 500, 100]];\nm.series = [\"Sales\"];\nreturn {payload:[m],topic:msg.topic};",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 380,
+        "y": 640,
+        "wires": [
+            [
+                "03fd035980712d7d",
+                "6540d95249eaf31b",
+                "d53d624ac208622b",
+                "fdfc6b5387b3aefe",
+                "a14ed6c0e7fcbbd3",
+                "b7acbf62a0ae97f1"
+            ]
+        ]
+    },
+    {
+        "id": "03fd035980712d7d",
+        "type": "ui_chart",
+        "z": "65db87d335e540c4",
+        "name": "pie chart",
+        "group": "89749fb7.87f01",
+        "order": 3,
+        "width": 0,
+        "height": 0,
+        "label": "pie chart",
+        "chartType": "pie",
+        "legend": "true",
+        "xformat": "HH:mm:ss",
+        "interpolate": "linear",
+        "nodata": "",
+        "dot": false,
+        "ymin": "",
+        "ymax": "",
+        "removeOlder": 1,
+        "removeOlderPoints": "",
+        "removeOlderUnit": "3600",
+        "cutout": "30",
+        "useOneColor": false,
+        "useUTC": false,
+        "colors": [
+            "#1f77b4",
+            "#aec7e8",
+            "#ff7f0e",
+            "#2ca02c",
+            "#98df8a",
+            "#d62728",
+            "#ff9896",
+            "#9467bd",
+            "#c5b0d5"
+        ],
+        "outputs": 1,
+        "useDifferentColor": false,
+        "className": "",
+        "x": 920,
+        "y": 380,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "50d59024be50d778",
+        "type": "ui_button",
+        "z": "65db87d335e540c4",
+        "name": "",
+        "group": "ab397e95.29ebe",
+        "order": 10,
+        "width": 0,
+        "height": 0,
+        "passthru": false,
+        "label": "array for pie",
+        "color": "",
+        "bgcolor": "",
+        "icon": "",
+        "payload": "",
+        "payloadType": "str",
+        "topic": "Pie 4 T",
+        "x": 220,
+        "y": 640,
+        "wires": [
+            [
+                "35fa8743b77da60d"
+            ]
+        ]
+    },
+    {
+        "id": "6e3b7b093795435b",
+        "type": "function",
+        "z": "65db87d335e540c4",
+        "name": "",
+        "func": "var chart = [{\n    \"series\":[\"A\",\"B\",\"C\"],\n        \"data\":[[{\"x\":1000000,\"y\":5},{\"x\":2000000,\"y\":4},{\"x\":3000000,\"y\":2}],[{\"x\":4000000,\"y\":6},{\"x\":5000000,\"y\":7},{\"x\":6000000,\"y\":6}],[{\"x\":7000000,\"y\":7},{\"x\":8000000,\"y\":9},{\"x\":9000000,\"y\":7}]],\n    \"labels\":[\"\"]\n}];\nmsg.payload = chart;\n\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "x": 360,
+        "y": 320,
+        "wires": [
+            [
+                "d53d624ac208622b"
+            ]
+        ]
+    },
+    {
+        "id": "67c89dab459a8502",
+        "type": "ui_button",
+        "z": "65db87d335e540c4",
+        "name": "",
+        "group": "ab397e95.29ebe",
+        "order": 3,
+        "width": 0,
+        "height": 0,
+        "passthru": false,
+        "label": "Time Line 3",
+        "color": "",
+        "bgcolor": "",
+        "icon": "",
+        "payload": "",
+        "payloadType": "str",
+        "topic": "",
+        "x": 220,
+        "y": 320,
+        "wires": [
+            [
+                "6e3b7b093795435b"
+            ]
+        ]
+    },
+    {
+        "id": "3cab2dd0fd399039",
+        "type": "function",
+        "z": "65db87d335e540c4",
+        "name": "",
+        "func": "var chart = [{\n    \"series\":[\"A\",\"B\",\"C\"],\n        \"data\":[[{\"x\":1000000000,\"y\":5},{\"x\":2000000000,\"y\":4},{\"x\":3000000000,\"y\":2}],[{\"x\":4000000000,\"y\":6},{\"x\":5000000000,\"y\":7},{\"x\":6000000000,\"y\":6}],[{\"x\":7000000000,\"y\":7},{\"x\":8000000000,\"y\":9},{\"x\":9000000000,\"y\":7}]],\n    \"labels\":[\"\"]\n}];\nmsg.payload = chart;\n\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 360,
+        "y": 360,
+        "wires": [
+            [
+                "d53d624ac208622b"
+            ]
+        ]
+    },
+    {
+        "id": "13b5274bc8b06fcb",
+        "type": "ui_button",
+        "z": "65db87d335e540c4",
+        "name": "",
+        "group": "ab397e95.29ebe",
+        "order": 4,
+        "width": 0,
+        "height": 0,
+        "passthru": false,
+        "label": "Time Line 4",
+        "color": "",
+        "bgcolor": "",
+        "icon": "",
+        "payload": "",
+        "payloadType": "str",
+        "topic": "",
+        "x": 220,
+        "y": 360,
+        "wires": [
+            [
+                "3cab2dd0fd399039"
+            ]
+        ]
+    },
+    {
+        "id": "5864921290a86f7c",
+        "type": "function",
+        "z": "65db87d335e540c4",
+        "name": "",
+        "func": "var m={\n    \"series\":[\"X\",\"Y\",\"Z\"],\n    \"data\":[[5,6,9],[3,8,5],[6,7,2]],\n    \"labels\":[\"Jan\",\"Feb\",\"Mar\"]\n};\nreturn {payload:[m]};",
+        "outputs": 1,
+        "noerr": 0,
+        "x": 360,
+        "y": 560,
+        "wires": [
+            [
+                "d53d624ac208622b",
+                "6540d95249eaf31b",
+                "03fd035980712d7d",
+                "fdfc6b5387b3aefe",
+                "a14ed6c0e7fcbbd3",
+                "b7acbf62a0ae97f1"
+            ]
+        ]
+    },
+    {
+        "id": "f6ee2635f86dbf91",
+        "type": "ui_button",
+        "z": "65db87d335e540c4",
+        "name": "",
+        "group": "ab397e95.29ebe",
+        "order": 9,
+        "width": 0,
+        "height": 0,
+        "passthru": false,
+        "label": "array3c",
+        "color": "",
+        "bgcolor": "",
+        "icon": "",
+        "payload": "",
+        "payloadType": "str",
+        "topic": "",
+        "x": 210,
+        "y": 560,
+        "wires": [
+            [
+                "5864921290a86f7c"
+            ]
+        ]
+    },
+    {
+        "id": "7ead404d0622470a",
+        "type": "ui_button",
+        "z": "65db87d335e540c4",
+        "name": "",
+        "group": "ab397e95.29ebe",
+        "order": 11,
+        "width": 0,
+        "height": 0,
+        "passthru": false,
+        "label": "array 2 for pie",
+        "tooltip": "",
+        "color": "",
+        "bgcolor": "",
+        "className": "",
+        "icon": "",
+        "payload": "",
+        "payloadType": "str",
+        "topic": "Pie Hole",
+        "topicType": "str",
+        "x": 230,
+        "y": 680,
+        "wires": [
+            [
+                "abf35020f5a8eff5"
+            ]
+        ]
+    },
+    {
+        "id": "abf35020f5a8eff5",
+        "type": "function",
+        "z": "65db87d335e540c4",
+        "name": "",
+        "func": "var m = {};\nm.labels = ['2006', '2007', '2008', '2009', '2010', '2011', '2012'];\nm.data = [[28, 48, 40, 19, 86, 27, 90]];\nm.series = ['Series A'];\nreturn {payload:[m],topic:msg.topic};",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 380,
+        "y": 680,
+        "wires": [
+            [
+                "03fd035980712d7d",
+                "6540d95249eaf31b",
+                "a14ed6c0e7fcbbd3",
+                "fdfc6b5387b3aefe",
+                "d53d624ac208622b",
+                "b7acbf62a0ae97f1"
+            ]
+        ]
+    },
+    {
+        "id": "1b4549d535cd1f91",
+        "type": "function",
+        "z": "65db87d335e540c4",
+        "name": "topic",
+        "func": "var m = [\n    {topic:\"X\", payload:22},\n    {topic:\"Y\", payload:66},\n    {topic:\"Z\", payload:42}\n    ];\nreturn [m];",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 360,
+        "y": 200,
+        "wires": [
+            [
+                "6540d95249eaf31b",
+                "03fd035980712d7d",
+                "d53d624ac208622b",
+                "b7acbf62a0ae97f1"
+            ]
+        ]
+    },
+    {
+        "id": "6e6f5afd7cd01b9a",
+        "type": "inject",
+        "z": "65db87d335e540c4",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": "",
+        "topic": "",
+        "payloadType": "date",
+        "x": 210,
+        "y": 200,
+        "wires": [
+            [
+                "1b4549d535cd1f91"
+            ]
+        ]
+    },
+    {
+        "id": "c1444cfe2f5d0659",
+        "type": "function",
+        "z": "65db87d335e540c4",
+        "name": "label",
+        "func": "var m = [\n    {label:\"A\", payload:22},\n    {label:\"B\", payload:66},\n    {label:\"C\", payload:42},\n    ];\nreturn [m];",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 360,
+        "y": 160,
+        "wires": [
+            [
+                "6540d95249eaf31b",
+                "03fd035980712d7d",
+                "d53d624ac208622b",
+                "b7acbf62a0ae97f1"
+            ]
+        ]
+    },
+    {
+        "id": "58469fa731b841c9",
+        "type": "inject",
+        "z": "65db87d335e540c4",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": "",
+        "topic": "",
+        "payloadType": "date",
+        "x": 210,
+        "y": 160,
+        "wires": [
+            [
+                "c1444cfe2f5d0659"
+            ]
+        ]
+    },
+    {
+        "id": "7a3e1ef66b38b2f2",
+        "type": "function",
+        "z": "65db87d335e540c4",
+        "name": "",
+        "func": "var m={\n    \"series\":[\"X\",\"Y\",\"Z\"],\n    \"data\":[[5],[3],[6]],\n    \"labels\":[\"Jan\"]\n};\nreturn {payload:[m]};",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 360,
+        "y": 480,
+        "wires": [
+            [
+                "6540d95249eaf31b",
+                "fdfc6b5387b3aefe",
+                "a14ed6c0e7fcbbd3",
+                "d53d624ac208622b",
+                "b7acbf62a0ae97f1",
+                "03fd035980712d7d"
+            ]
+        ]
+    },
+    {
+        "id": "5bd8a6d70d768ceb",
+        "type": "ui_button",
+        "z": "65db87d335e540c4",
+        "name": "",
+        "group": "ab397e95.29ebe",
+        "order": 7,
+        "width": 0,
+        "height": 0,
+        "passthru": false,
+        "label": "array3a",
+        "color": "",
+        "bgcolor": "",
+        "icon": "",
+        "payload": "",
+        "payloadType": "str",
+        "topic": "",
+        "x": 210,
+        "y": 480,
+        "wires": [
+            [
+                "7a3e1ef66b38b2f2"
+            ]
+        ]
+    },
+    {
+        "id": "5db40a38e0e59060",
+        "type": "function",
+        "z": "65db87d335e540c4",
+        "name": "",
+        "func": "var m={\n    \"series\":[\"X\"],\n    \"data\":[[5,3,6]],\n    \"labels\":[\"Jan\",\"Feb\",\"Mar\"]\n};\nreturn {payload:[m]};",
+        "outputs": 1,
+        "noerr": 0,
+        "x": 360,
+        "y": 520,
+        "wires": [
+            [
+                "6540d95249eaf31b",
+                "d53d624ac208622b",
+                "a14ed6c0e7fcbbd3",
+                "fdfc6b5387b3aefe",
+                "b7acbf62a0ae97f1",
+                "03fd035980712d7d"
+            ]
+        ]
+    },
+    {
+        "id": "7502d157ca15b0f4",
+        "type": "ui_button",
+        "z": "65db87d335e540c4",
+        "name": "",
+        "group": "ab397e95.29ebe",
+        "order": 8,
+        "width": 0,
+        "height": 0,
+        "passthru": false,
+        "label": "array3b",
+        "color": "",
+        "bgcolor": "",
+        "icon": "",
+        "payload": "",
+        "payloadType": "str",
+        "topic": "",
+        "x": 210,
+        "y": 520,
+        "wires": [
+            [
+                "5db40a38e0e59060"
+            ]
+        ]
+    },
+    {
+        "id": "b7acbf62a0ae97f1",
+        "type": "ui_chart",
+        "z": "65db87d335e540c4",
+        "name": "",
+        "group": "4e7edda4.417004",
+        "order": 2,
+        "width": 0,
+        "height": 0,
+        "label": "horizontal bar",
+        "chartType": "horizontalBar",
+        "legend": "false",
+        "xformat": "HH:mm:ss",
+        "interpolate": "linear",
+        "nodata": "",
+        "dot": false,
+        "ymin": "",
+        "ymax": "",
+        "removeOlder": 1,
+        "removeOlderPoints": "",
+        "removeOlderUnit": "3600",
+        "cutout": "30",
+        "colors": [
+            "#1f77b4",
+            "#aec7e8",
+            "#ff7f0e",
+            "#2ca02c",
+            "#98df8a",
+            "#d62728",
+            "#ff9896",
+            "#9467bd",
+            "#c5b0d5"
+        ],
+        "outputs": 2,
+        "x": 650,
+        "y": 260,
+        "wires": [
+            [],
+            []
+        ]
+    },
+    {
+        "id": "fdfc6b5387b3aefe",
+        "type": "ui_chart",
+        "z": "65db87d335e540c4",
+        "name": "",
+        "group": "4e7edda4.417004",
+        "order": 3,
+        "width": 0,
+        "height": 0,
+        "label": "polar chart",
+        "chartType": "polar-area",
+        "legend": "false",
+        "xformat": "HH:mm:ss",
+        "interpolate": "linear",
+        "nodata": "",
+        "dot": false,
+        "ymin": "",
+        "ymax": "",
+        "removeOlder": 1,
+        "removeOlderPoints": "",
+        "removeOlderUnit": "3600",
+        "cutout": "30",
+        "colors": [
+            "#1f77b4",
+            "#aec7e8",
+            "#ff7f0e",
+            "#2ca02c",
+            "#98df8a",
+            "#d62728",
+            "#ff9896",
+            "#9467bd",
+            "#c5b0d5"
+        ],
+        "outputs": 2,
+        "x": 680,
+        "y": 500,
+        "wires": [
+            [],
+            []
+        ]
+    },
+    {
+        "id": "a14ed6c0e7fcbbd3",
+        "type": "ui_chart",
+        "z": "65db87d335e540c4",
+        "name": "",
+        "group": "4e7edda4.417004",
+        "order": 4,
+        "width": 0,
+        "height": 0,
+        "label": "radar chart",
+        "chartType": "radar",
+        "legend": "false",
+        "xformat": "HH:mm:ss",
+        "interpolate": "linear",
+        "nodata": "",
+        "dot": false,
+        "ymin": "",
+        "ymax": "",
+        "removeOlder": 1,
+        "removeOlderPoints": "",
+        "removeOlderUnit": "3600",
+        "cutout": "30",
+        "colors": [
+            "#1f77b4",
+            "#aec7e8",
+            "#ff7f0e",
+            "#2ca02c",
+            "#98df8a",
+            "#d62728",
+            "#ff9896",
+            "#9467bd",
+            "#c5b0d5"
+        ],
+        "outputs": 2,
+        "x": 680,
+        "y": 560,
+        "wires": [
+            [],
+            []
+        ]
+    },
+    {
+        "id": "595a52bf3050c70e",
+        "type": "function",
+        "z": "65db87d335e540c4",
+        "name": "label",
+        "func": "var m = [\n    {label:\"A\", payload:22, series:\"X\"},\n    {label:\"B\", payload:66, series:\"X\"},\n    {label:\"C\", payload:42, series:\"X\"},\n    {label:\"A\", payload:33, series:\"Y\"},\n    {label:\"B\", payload:72, series:\"Y\"},\n    {label:\"C\", payload:12, series:\"Y\"},\n    {label:\"A\", payload:44, series:\"Z\"},\n    {label:\"B\", payload:32, series:\"Z\"},\n    {label:\"C\", payload:80, series:\"Z\"}\n    ];\nreturn [m];",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 360,
+        "y": 120,
+        "wires": [
+            [
+                "03fd035980712d7d",
+                "6540d95249eaf31b",
+                "d53d624ac208622b",
+                "b7acbf62a0ae97f1"
+            ]
+        ]
+    },
+    {
+        "id": "c14636f04f98ef66",
+        "type": "inject",
+        "z": "65db87d335e540c4",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": "",
+        "topic": "",
+        "payloadType": "date",
+        "x": 210,
+        "y": 120,
+        "wires": [
+            [
+                "595a52bf3050c70e"
+            ]
+        ]
+    },
+    {
+        "id": "aa97a0b24f34dbe9",
+        "type": "ui_button",
+        "z": "65db87d335e540c4",
+        "name": "",
+        "group": "ab397e95.29ebe",
+        "order": 11,
+        "width": 0,
+        "height": 0,
+        "passthru": false,
+        "label": "Clear All",
+        "tooltip": "",
+        "color": "",
+        "bgcolor": "",
+        "className": "",
+        "icon": "",
+        "payload": "[]",
+        "payloadType": "json",
+        "topic": "",
+        "topicType": "str",
+        "x": 350,
+        "y": 80,
+        "wires": [
+            [
+                "a14ed6c0e7fcbbd3",
+                "fdfc6b5387b3aefe",
+                "03fd035980712d7d",
+                "b7acbf62a0ae97f1",
+                "6540d95249eaf31b",
+                "d53d624ac208622b"
+            ]
+        ]
+    },
+    {
+        "id": "ee266a60c507401d",
+        "type": "ui_chart",
+        "z": "00676439c2d60620",
         "name": "",
         "group": "aec291222b3aacd3",
-        "order": 2,
-        "width": "8",
-        "height": "4",
+        "order": 6,
+        "width": 8,
+        "height": 4,
         "label": "",
         "chartType": "line",
         "legend": "false",
@@ -734,21 +1693,159 @@
         "outputs": 1,
         "useDifferentColor": false,
         "className": "",
-        "x": 750,
-        "y": 360,
+        "x": 790,
+        "y": 340,
         "wires": [
             []
+        ],
+        "inputLabels": [
+            "IN_Pot Reativa Total 69kV"
+        ],
+        "outputLabels": [
+            "OUT_Pot Reativa Total 69kV"
         ]
     },
     {
-        "id": "135ad2249a42896d",
+        "id": "8d568d76392ceb66",
+        "type": "ui_gauge",
+        "z": "00676439c2d60620",
+        "name": "",
+        "group": "c14bcdd0bd5f4674",
+        "order": 1,
+        "width": 8,
+        "height": 4,
+        "gtype": "gage",
+        "title": "",
+        "label": "kW",
+        "format": "{{value}}",
+        "min": 0,
+        "max": "7620",
+        "colors": [
+            "#c2c7c2",
+            "#4ad723",
+            "#ff0000"
+        ],
+        "seg1": "3500",
+        "seg2": "5000",
+        "className": "",
+        "x": 790,
+        "y": 120,
+        "wires": []
+    },
+    {
+        "id": "94cbcc01d48c5cb1",
+        "type": "ui_gauge",
+        "z": "00676439c2d60620",
+        "name": "",
+        "group": "aec291222b3aacd3",
+        "order": 1,
+        "width": 8,
+        "height": 4,
+        "gtype": "gage",
+        "title": "",
+        "label": "KwVAR",
+        "format": "{{value}}",
+        "min": 0,
+        "max": "8000",
+        "colors": [
+            "#c2c7c2",
+            "#4ad723",
+            "#ff0000"
+        ],
+        "seg1": "3500",
+        "seg2": "5000",
+        "className": "",
+        "x": 790,
+        "y": 420,
+        "wires": []
+    },
+    {
+        "id": "2156c7c25c5f0130",
+        "type": "modbus-read",
+        "z": "00676439c2d60620",
+        "name": "FLOATINGS - CCK 6700E 69KVA",
+        "topic": "",
+        "showStatusActivities": true,
+        "logIOActivities": false,
+        "showErrors": true,
+        "unitid": "1",
+        "dataType": "HoldingRegister",
+        "adr": "64",
+        "quantity": "1",
+        "rate": "500",
+        "rateUnit": "ms",
+        "delayOnStart": false,
+        "startDelayTime": "",
+        "server": "f2157ba6498170ca",
+        "useIOFile": false,
+        "ioFile": "",
+        "useIOForPayload": false,
+        "emptyMsgOnFail": true,
+        "x": 180,
+        "y": 240,
+        "wires": [
+            [
+                "4080aa3484d857ea",
+                "5818e17e9bafa07b",
+                "1d9fe172d08cff30"
+            ],
+            []
+        ],
+        "outputLabels": [
+            "MOTCP",
+            ""
+        ],
+        "info": "    IP: 172.23.130.35:502:1\n    type andress: FP:16\n    \n    CCK_Demanda_Ativa       \t0\t\t\n    CCK_Demanda_Reativa     \t2\t\t\n    CCK_Fator_Potencia      \t4\t\t\n    CCK_Energia_AI_UI       \t6\t\t\n    CCK_Energia_RI_UI\t        8\t\t\n    CCK_Demanda_Disp\t        10\t\t\n    CCK_Tensao_L_Trifasica\t    12\t\t\n    CCK_Floating_Reserva01\t    14\t\t\n    CCK_Floating_Reserva02\t    16\t\t\n    CCK_Floating_Reserva03\t    18\t\t\n    CCK_Corrente_L_Trifasica\t20\t\t\n    "
+    },
+    {
+        "id": "1d9fe172d08cff30",
+        "type": "function",
+        "z": "00676439c2d60620",
+        "name": "Demanda mÃ©dia 69kV",
+        "func": "var payload = msg.payload;\nmsg.payload = (payload[0]);\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 520,
+        "y": 80,
+        "wires": [
+            [
+                "8d568d76392ceb66",
+                "339958be4d97c88d"
+            ]
+        ]
+    },
+    {
+        "id": "4080aa3484d857ea",
+        "type": "function",
+        "z": "00676439c2d60620",
+        "name": "Fator de potencia 69kV",
+        "func": "var payload = msg.payload;\nmsg.payload = (payload[1]);\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 530,
+        "y": 240,
+        "wires": [
+            [
+                "bff1ef3362826dd9",
+                "914e0d22fc690b23"
+            ]
+        ]
+    },
+    {
+        "id": "bff1ef3362826dd9",
         "type": "ui_chart",
-        "z": "159a9d79b8ef992b",
+        "z": "00676439c2d60620",
         "name": "",
         "group": "9f0a77ab3f31bf74",
-        "order": 2,
-        "width": "8",
-        "height": "4",
+        "order": 6,
+        "width": 9,
+        "height": 4,
         "label": "",
         "chartType": "line",
         "legend": "false",
@@ -778,10 +1875,2266 @@
         "outputs": 1,
         "useDifferentColor": false,
         "className": "",
-        "x": 750,
-        "y": 220,
+        "x": 790,
+        "y": 200,
         "wires": [
             []
         ]
+    },
+    {
+        "id": "914e0d22fc690b23",
+        "type": "ui_gauge",
+        "z": "00676439c2d60620",
+        "name": "",
+        "group": "9f0a77ab3f31bf74",
+        "order": 1,
+        "width": 9,
+        "height": 4,
+        "gtype": "gage",
+        "title": "",
+        "label": "FB",
+        "format": "{{value}}",
+        "min": 0,
+        "max": "1.65",
+        "colors": [
+            "#e21d27",
+            "#4ad723",
+            "#ff0000"
+        ],
+        "seg1": "0.85",
+        "seg2": "1.1",
+        "className": "",
+        "x": 790,
+        "y": 280,
+        "wires": []
+    },
+    {
+        "id": "5818e17e9bafa07b",
+        "type": "function",
+        "z": "00676439c2d60620",
+        "name": "Demanda Reativa Total 69kV",
+        "func": "var payload = msg.payload;\nmsg.payload = (payload[2]);\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 540,
+        "y": 380,
+        "wires": [
+            [
+                "ee266a60c507401d",
+                "94cbcc01d48c5cb1"
+            ]
+        ]
+    },
+    {
+        "id": "ab11727d2a406856",
+        "type": "comment",
+        "z": "00676439c2d60620",
+        "name": "Leitura das demandas da 69kV atravÃ©s do CCK",
+        "info": "Leitura de Energia da SubestaÃ§Ã£o 69KV - Medidor PowerLogic PM5110 ",
+        "x": 320,
+        "y": 40,
+        "wires": []
+    },
+    {
+        "id": "339958be4d97c88d",
+        "type": "ui_chart",
+        "z": "00676439c2d60620",
+        "name": "",
+        "group": "c14bcdd0bd5f4674",
+        "order": 6,
+        "width": 8,
+        "height": 4,
+        "label": "",
+        "chartType": "line",
+        "legend": "false",
+        "xformat": "HH:mm:ss",
+        "interpolate": "linear",
+        "nodata": "",
+        "dot": false,
+        "ymin": "0",
+        "ymax": "8000",
+        "removeOlder": "5",
+        "removeOlderPoints": "",
+        "removeOlderUnit": "60",
+        "cutout": 0,
+        "useOneColor": false,
+        "useUTC": false,
+        "colors": [
+            "#1f77b4",
+            "#aec7e8",
+            "#ff7f0e",
+            "#2ca02c",
+            "#98df8a",
+            "#d62728",
+            "#ff9896",
+            "#9467bd",
+            "#c5b0d5"
+        ],
+        "outputs": 1,
+        "useDifferentColor": false,
+        "className": "",
+        "x": 790,
+        "y": 40,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "890161e5dbdd40bf",
+        "type": "modbus-read",
+        "z": "00676439c2d60620",
+        "name": "Consumo da 69kV em mW",
+        "topic": "",
+        "showStatusActivities": true,
+        "logIOActivities": false,
+        "showErrors": true,
+        "unitid": "1",
+        "dataType": "HoldingRegister",
+        "adr": "6140",
+        "quantity": "2",
+        "rate": "2",
+        "rateUnit": "s",
+        "delayOnStart": false,
+        "startDelayTime": "",
+        "server": "f2157ba6498170ca",
+        "useIOFile": false,
+        "ioFile": "",
+        "useIOForPayload": false,
+        "emptyMsgOnFail": true,
+        "x": 150,
+        "y": 680,
+        "wires": [
+            [],
+            []
+        ],
+        "outputLabels": [
+            "MOTCP",
+            ""
+        ],
+        "info": "    IP: 172.23.130.35:502:1\n    type andress: FP:16\n    \n    CCK_Demanda_Ativa       \t0\t\t\n    CCK_Demanda_Reativa     \t2\t\t\n    CCK_Fator_Potencia      \t4\t\t\n    CCK_Energia_AI_UI       \t6\t\t\n    CCK_Energia_RI_UI\t        8\t\t\n    CCK_Demanda_Disp\t        10\t\t\n    CCK_Tensao_L_Trifasica\t    12\t\t\n    CCK_Floating_Reserva01\t    14\t\t\n    CCK_Floating_Reserva02\t    16\t\t\n    CCK_Floating_Reserva03\t    18\t\t\n    CCK_Corrente_L_Trifasica\t20\t\t\n    "
+    },
+    {
+        "id": "1dcda32b9c9cc1b8",
+        "type": "comment",
+        "z": "00676439c2d60620",
+        "name": "Leitura das correntes da 69kV atravÃ©s do SEPAM",
+        "info": "Leitura de Energia da SubestaÃ§Ã£o 69KV - Medidor PowerLogic PM5110 ",
+        "x": 330,
+        "y": 560,
+        "wires": []
+    },
+    {
+        "id": "21efe8a0a19df870",
+        "type": "ui_chart",
+        "z": "00676439c2d60620",
+        "name": "",
+        "group": "8fb259e231b967ad",
+        "order": 1,
+        "width": 20,
+        "height": 13,
+        "label": "",
+        "chartType": "bar",
+        "legend": "false",
+        "xformat": "HH:mm:ss",
+        "interpolate": "linear",
+        "nodata": "",
+        "dot": false,
+        "ymin": "0",
+        "ymax": "70",
+        "removeOlder": "15",
+        "removeOlderPoints": "",
+        "removeOlderUnit": "60",
+        "cutout": 0,
+        "useOneColor": true,
+        "useUTC": false,
+        "colors": [
+            "#1f78b7",
+            "#1f78b7",
+            "#1f78b7",
+            "#1f78b7",
+            "#1f78b7",
+            "#1f78b7",
+            "#1f78b7",
+            "#1f78b7",
+            "#1f78b7",
+            "#1f78b7",
+            "#1f78b7",
+            "#1f78b7",
+            "#1f78b7",
+            "#1f78b7",
+            "#1f78b7",
+            "#1f78b7",
+            "#1f78b7",
+            "#1f78b7",
+            "#1f78b7",
+            "#1f78b7",
+            "#1f78b7",
+            "#1f78b7",
+            "#1f78b7",
+            "#1f78b7",
+            "#1f78b7",
+            "#1f78b7",
+            "#1f78b7",
+            "#1f78b7",
+            "#1f78b7",
+            "#1f78b7",
+            "#1f78b7"
+        ],
+        "outputs": 1,
+        "useDifferentColor": false,
+        "className": "",
+        "x": 870,
+        "y": 680,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "b467040805a64de7",
+        "type": "function",
+        "z": "00676439c2d60620",
+        "name": "ConcatenaÃ§Ã£o das correntes 69kV - TR1 SaÃ­da",
+        "func": "var payload = msg.payload;\n\nvar m={};\nm.labels = [\"Consumo em megaWatt\"];\nm.series = ['megaWatt dia 1', 'mW dia 2', 'mW dia 3','mW dia 4','mW dia 5','mW dia 6','mW dia 7','mW dia 8','mW dia 9','mW dia 10','mW dia 11','mW dia 12','mW dia 13','mW dia 14','mW dia 15','mW dia 16','mW dia 17','mW dia 18','mW dia 19','mW dia 20','mW dia 21','mW dia 22','mW dia 23','mW dia 24','mW dia 25','mW dia 26','mW dia 27','mW dia 28','mW dia 29','mW dia 30','mW dia 31'];\nm.data = [\n    [payload[0] ],\n    [payload[1] ],\n    [payload[2] ],\n    [payload[3] ],\n    [payload[4] ],\n    [payload[5] ],\n    [payload[6] ],\n    [payload[7] ],\n    [payload[8] ],\n    [payload[9] ],\n    [payload[10] ],\n    [payload[11] ],\n    [payload[12] ],\n    [payload[13] ],\n    [payload[14] ],\n    [payload[15] ],\n    [payload[16] ],\n    [payload[17] ],\n    [payload[18] ],\n    [payload[19] ],\n    [payload[20] ],\n    [payload[21] ],\n    [payload[22] ],\n    [payload[23] ], \n    [payload[24] ],\n    [payload[25] ],\n    [payload[26] ],\n    [payload[27] ],\n    [payload[28] ],\n    [payload[29] ],\n    [payload[30] ],\n    [payload[31] ],\n\n  ];\n  return {payload:[m]};",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 550,
+        "y": 680,
+        "wires": [
+            [
+                "21efe8a0a19df870"
+            ]
+        ]
+    },
+    {
+        "id": "7dcf514d26c5c972",
+        "type": "inject",
+        "z": "00676439c2d60620",
+        "name": "",
+        "props": [
+            {
+                "p": "payload[0]",
+                "v": "0",
+                "vt": "num"
+            },
+            {
+                "p": "payload[1]",
+                "v": "17000",
+                "vt": "num"
+            },
+            {
+                "p": "payload[2]",
+                "v": "10",
+                "vt": "num"
+            },
+            {
+                "p": "payload[3]",
+                "v": "17000",
+                "vt": "num"
+            },
+            {
+                "p": "payload[4]",
+                "v": "20",
+                "vt": "num"
+            },
+            {
+                "p": "payload[5]",
+                "v": "17000",
+                "vt": "num"
+            },
+            {
+                "p": "payload[6]",
+                "v": "30",
+                "vt": "num"
+            },
+            {
+                "p": "payload[7]",
+                "v": "17000",
+                "vt": "num"
+            },
+            {
+                "p": "payload[8]",
+                "v": "40",
+                "vt": "num"
+            },
+            {
+                "p": "payload[9]",
+                "v": "17000",
+                "vt": "num"
+            },
+            {
+                "p": "payload[10]",
+                "v": "50",
+                "vt": "num"
+            },
+            {
+                "p": "payload[11]",
+                "v": "17000",
+                "vt": "num"
+            },
+            {
+                "p": "payload[12]",
+                "v": "60",
+                "vt": "num"
+            },
+            {
+                "p": "payload[13]",
+                "v": "17000",
+                "vt": "num"
+            },
+            {
+                "p": "payload[14]",
+                "v": "70",
+                "vt": "num"
+            },
+            {
+                "p": "payload[15]",
+                "v": "17000",
+                "vt": "num"
+            },
+            {
+                "p": "payload[16]",
+                "v": "80",
+                "vt": "num"
+            },
+            {
+                "p": "payload[17]",
+                "v": "17000",
+                "vt": "num"
+            },
+            {
+                "p": "payload[18]",
+                "v": "90",
+                "vt": "num"
+            },
+            {
+                "p": "payload[19]",
+                "v": "17000",
+                "vt": "num"
+            },
+            {
+                "p": "payload[20]",
+                "v": "100",
+                "vt": "num"
+            },
+            {
+                "p": "payload[21]",
+                "v": "17000",
+                "vt": "num"
+            },
+            {
+                "p": "payload[22]",
+                "v": "110",
+                "vt": "num"
+            },
+            {
+                "p": "payload[23]",
+                "v": "17000",
+                "vt": "num"
+            },
+            {
+                "p": "payload[24]",
+                "v": "120",
+                "vt": "num"
+            },
+            {
+                "p": "payload[25]",
+                "v": "17000",
+                "vt": "num"
+            },
+            {
+                "p": "payload[26]",
+                "v": "130",
+                "vt": "num"
+            },
+            {
+                "p": "payload[27]",
+                "v": "17000",
+                "vt": "num"
+            },
+            {
+                "p": "payload[28]",
+                "v": "140",
+                "vt": "num"
+            },
+            {
+                "p": "payload[29]",
+                "v": "17000",
+                "vt": "num"
+            },
+            {
+                "p": "payload[30]",
+                "v": "150",
+                "vt": "num"
+            },
+            {
+                "p": "payload[31]",
+                "v": "17000",
+                "vt": "num"
+            },
+            {
+                "p": "payload[32]",
+                "v": "160",
+                "vt": "num"
+            },
+            {
+                "p": "payload[33]",
+                "v": "17000",
+                "vt": "num"
+            },
+            {
+                "p": "payload[34]",
+                "v": "170",
+                "vt": "num"
+            },
+            {
+                "p": "payload[35]",
+                "v": "17000",
+                "vt": "num"
+            },
+            {
+                "p": "payload[36]",
+                "v": "180",
+                "vt": "num"
+            },
+            {
+                "p": "payload[37]",
+                "v": "17000",
+                "vt": "num"
+            },
+            {
+                "p": "payload[38]",
+                "v": "190",
+                "vt": "num"
+            },
+            {
+                "p": "payload[39]",
+                "v": "17000",
+                "vt": "num"
+            },
+            {
+                "p": "payload[40]",
+                "v": "200",
+                "vt": "num"
+            },
+            {
+                "p": "payload[41]",
+                "v": "17000",
+                "vt": "num"
+            },
+            {
+                "p": "payload[42]",
+                "v": "210",
+                "vt": "num"
+            },
+            {
+                "p": "payload[43]",
+                "v": "17000",
+                "vt": "num"
+            },
+            {
+                "p": "payload[44]",
+                "v": "220",
+                "vt": "num"
+            },
+            {
+                "p": "payload[45]",
+                "v": "17000",
+                "vt": "num"
+            },
+            {
+                "p": "payload[46]",
+                "v": "230",
+                "vt": "num"
+            },
+            {
+                "p": "payload[47]",
+                "v": "17000",
+                "vt": "num"
+            },
+            {
+                "p": "payload[48]",
+                "v": "240",
+                "vt": "num"
+            },
+            {
+                "p": "payload[49]",
+                "v": "17000",
+                "vt": "num"
+            },
+            {
+                "p": "payload[50]",
+                "v": "250",
+                "vt": "num"
+            },
+            {
+                "p": "payload[51]",
+                "v": "17000",
+                "vt": "num"
+            },
+            {
+                "p": "payload[52]",
+                "v": "260",
+                "vt": "num"
+            },
+            {
+                "p": "payload[53]",
+                "v": "17000",
+                "vt": "num"
+            },
+            {
+                "p": "payload[54]",
+                "v": "270",
+                "vt": "num"
+            },
+            {
+                "p": "payload[55]",
+                "v": "17000",
+                "vt": "num"
+            },
+            {
+                "p": "payload[56]",
+                "v": "280",
+                "vt": "num"
+            },
+            {
+                "p": "payload[57]",
+                "v": "17000",
+                "vt": "num"
+            },
+            {
+                "p": "payload[58]",
+                "v": "290",
+                "vt": "num"
+            },
+            {
+                "p": "payload[59]",
+                "v": "17000",
+                "vt": "num"
+            },
+            {
+                "p": "payload[60]",
+                "v": "300",
+                "vt": "num"
+            },
+            {
+                "p": "payload[61]",
+                "v": "17000",
+                "vt": "num"
+            }
+        ],
+        "repeat": "2",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "x": 190,
+        "y": 780,
+        "wires": [
+            [
+                "b0a4349e7a080c89",
+                "e114eececa88bffb"
+            ]
+        ]
+    },
+    {
+        "id": "2ee38d01ac8ddac1",
+        "type": "debug",
+        "z": "00676439c2d60620",
+        "name": "",
+        "active": false,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "payload",
+        "targetType": "msg",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 790,
+        "y": 820,
+        "wires": []
+    },
+    {
+        "id": "b0a4349e7a080c89",
+        "type": "function",
+        "z": "00676439c2d60620",
+        "name": "Convert byte 16bits to float 32",
+        "func": "var ui16 = new Uint16Array(msg.payload);\nvar fl32 = new Float32Array(ui16.buffer, ui16.byteOffset, ui16.byteLength / Float32Array.BYTES_PER_ELEMENT);\nmsg.payload[0]= fl32[0];\nmsg.payload[1]= fl32[1];\nmsg.payload[2]= fl32[2];\nmsg.payload[3]= fl32[3]\nmsg.payload[4]= fl32[4]\nmsg.payload[5]= fl32[5]\nmsg.payload[6]= fl32[6]\nmsg.payload[7]= fl32[7]\nmsg.payload[8]= fl32[8]\nmsg.payload[9]= fl32[9]\nmsg.payload[10]= fl32[10]\nmsg.payload[11]= fl32[11]\nmsg.payload[12]= fl32[12]\nmsg.payload[13]= fl32[13]\nmsg.payload[14]= fl32[14]\nmsg.payload[15]= fl32[15]\nmsg.payload[16]= fl32[16]\nmsg.payload[17]= fl32[17]\nmsg.payload[18]= fl32[18]\nmsg.payload[19]= fl32[19]\nmsg.payload[20]= fl32[20]\nmsg.payload[21]= fl32[21]\nmsg.payload[22]= fl32[22]\nmsg.payload[23]= fl32[23]\nmsg.payload[24]= fl32[24]\nmsg.payload[25]= fl32[25]\nmsg.payload[26]= fl32[26]\nmsg.payload[27]= fl32[27]\nmsg.payload[28]= fl32[28]\nmsg.payload[29]= fl32[29]\nmsg.payload[30]= fl32[30]\nmsg.payload[31]= fl32[31]\n\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 490,
+        "y": 820,
+        "wires": [
+            [
+                "2ee38d01ac8ddac1",
+                "b467040805a64de7"
+            ]
+        ]
+    },
+    {
+        "id": "e114eececa88bffb",
+        "type": "debug",
+        "z": "00676439c2d60620",
+        "name": "",
+        "active": false,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "payload",
+        "targetType": "msg",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 430,
+        "y": 880,
+        "wires": []
+    },
+    {
+        "id": "07638fd4f66e9467",
+        "type": "ui_chart",
+        "z": "00676439c2d60620",
+        "name": "pie chart",
+        "group": "d1660fd088b91af6",
+        "order": 1,
+        "width": 8,
+        "height": 8,
+        "label": "",
+        "chartType": "pie",
+        "legend": "true",
+        "xformat": "HH:mm:ss",
+        "interpolate": "linear",
+        "nodata": "",
+        "dot": false,
+        "ymin": "",
+        "ymax": "",
+        "removeOlder": 1,
+        "removeOlderPoints": "",
+        "removeOlderUnit": "3600",
+        "cutout": "25",
+        "useOneColor": false,
+        "useUTC": false,
+        "colors": [
+            "#1f77b4",
+            "#aec7e8",
+            "#ff7f0e",
+            "#2ca02c",
+            "#98df8a",
+            "#d62728",
+            "#ff9896",
+            "#9467bd",
+            "#c5b0d5"
+        ],
+        "outputs": 1,
+        "useDifferentColor": false,
+        "className": "",
+        "x": 1000,
+        "y": 1180,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "9bfa0ebc1d4483a0",
+        "type": "function",
+        "z": "00676439c2d60620",
+        "name": "ConcatenaÃ§Ã£o das correntes 69kV - TR1 SaÃ­da",
+        "func": "var payload = msg.payload;\n\nvar m={};\nm.labels = [\"Consumo em megaWatt\"];\nm.series = ['megaWatt dia 1', 'mW dia 2', 'mW dia 3','mW dia 4','mW dia 5','mW dia 6','mW dia 7','mW dia 8','mW dia 9','mW dia 10','mW dia 11','mW dia 12','mW dia 13','mW dia 14','mW dia 15','mW dia 16','mW dia 17','mW dia 18','mW dia 19','mW dia 20','mW dia 21','mW dia 22','mW dia 23','mW dia 24','mW dia 25','mW dia 26','mW dia 27','mW dia 28','mW dia 29','mW dia 30','mW dia 31'];\nm.data = [\n    [payload[0] ],\n    [payload[1] ],\n    [payload[2] ],\n    [payload[3] ],\n\n  ];\n  return {payload:[m]};",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 510,
+        "y": 1180,
+        "wires": [
+            [
+                "84d4deb12f93d359"
+            ]
+        ]
+    },
+    {
+        "id": "f6611aa7b690bd81",
+        "type": "inject",
+        "z": "00676439c2d60620",
+        "name": "",
+        "props": [
+            {
+                "p": "payload[0]",
+                "v": "0",
+                "vt": "num"
+            },
+            {
+                "p": "payload[1]",
+                "v": "17000",
+                "vt": "num"
+            },
+            {
+                "p": "payload[2]",
+                "v": "10",
+                "vt": "num"
+            },
+            {
+                "p": "payload[3]",
+                "v": "17000",
+                "vt": "num"
+            },
+            {
+                "p": "payload[4]",
+                "v": "20",
+                "vt": "num"
+            },
+            {
+                "p": "payload[5]",
+                "v": "17000",
+                "vt": "num"
+            },
+            {
+                "p": "payload[6]",
+                "v": "30",
+                "vt": "num"
+            },
+            {
+                "p": "payload[7]",
+                "v": "17000",
+                "vt": "num"
+            }
+        ],
+        "repeat": "2",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "x": 150,
+        "y": 1280,
+        "wires": [
+            [
+                "669d9396d113f9d0",
+                "7ff8f94a98801e0d"
+            ]
+        ]
+    },
+    {
+        "id": "a87ca22fb5b1b7cd",
+        "type": "debug",
+        "z": "00676439c2d60620",
+        "name": "",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "payload",
+        "targetType": "msg",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 750,
+        "y": 1320,
+        "wires": []
+    },
+    {
+        "id": "669d9396d113f9d0",
+        "type": "function",
+        "z": "00676439c2d60620",
+        "name": "Convert byte 16bits to float 32",
+        "func": "var ui16 = new Uint16Array(msg.payload);\nvar fl32 = new Float32Array(ui16.buffer, ui16.byteOffset, ui16.byteLength / Float32Array.BYTES_PER_ELEMENT);\nmsg.payload[0]= fl32[0];\nmsg.payload[1]= fl32[1];\nmsg.payload[2]= fl32[2];\nmsg.payload[3]= fl32[3]\n\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 450,
+        "y": 1320,
+        "wires": [
+            [
+                "a87ca22fb5b1b7cd",
+                "9bfa0ebc1d4483a0"
+            ]
+        ]
+    },
+    {
+        "id": "7ff8f94a98801e0d",
+        "type": "debug",
+        "z": "00676439c2d60620",
+        "name": "",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "payload",
+        "targetType": "msg",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 390,
+        "y": 1380,
+        "wires": []
+    },
+    {
+        "id": "84d4deb12f93d359",
+        "type": "function",
+        "z": "00676439c2d60620",
+        "name": "",
+        "func": "var m={\n    \"series\":[\"xxx\"],\n    \"data\":[[25,25,25,25]],\n    \"labels\":[\"SUB_69kVA\",\"SUB_01\",\"SUB_02\",\"SUB_03\"]\n};\nreturn {payload:[m]};",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 820,
+        "y": 1180,
+        "wires": [
+            [
+                "07638fd4f66e9467"
+            ]
+        ]
+    },
+    {
+        "id": "d432e901cd42265e",
+        "type": "ui_text",
+        "z": "00676439c2d60620",
+        "group": "8c9880861bc783ad",
+        "order": 1,
+        "width": 0,
+        "height": 0,
+        "name": "",
+        "label": "SUB 69kVA_ ",
+        "format": "{{msg.payload}}",
+        "layout": "row-left",
+        "className": "",
+        "x": 990,
+        "y": 1620,
+        "wires": []
+    },
+    {
+        "id": "369895735037c9d1",
+        "type": "function",
+        "z": "00676439c2d60620",
+        "name": "Convert byte 16bits to float 32",
+        "func": "var ui16 = new Uint16Array(msg.payload);\nvar fl32 = new Float32Array(ui16.buffer, ui16.byteOffset, ui16.byteLength / Float32Array.BYTES_PER_ELEMENT);\nmsg.payload[0]= fl32[0];\n\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 450,
+        "y": 1620,
+        "wires": [
+            [
+                "a7025df94e06379a"
+            ]
+        ]
+    },
+    {
+        "id": "7166aaf8140b3874",
+        "type": "function",
+        "z": "00676439c2d60620",
+        "name": "Convert byte 16bits to float 32",
+        "func": "var ui16 = new Uint16Array(msg.payload);\nvar fl32 = new Float32Array(ui16.buffer, ui16.byteOffset, ui16.byteLength / Float32Array.BYTES_PER_ELEMENT);\nmsg.payload[0]= fl32[0];\n\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 450,
+        "y": 1700,
+        "wires": [
+            [
+                "a828dbcef579dae5"
+            ]
+        ]
+    },
+    {
+        "id": "ba17f5f264845fb5",
+        "type": "function",
+        "z": "00676439c2d60620",
+        "name": "Convert byte 16bits to float 32",
+        "func": "var ui16 = new Uint16Array(msg.payload);\nvar fl32 = new Float32Array(ui16.buffer, ui16.byteOffset, ui16.byteLength / Float32Array.BYTES_PER_ELEMENT);\nmsg.payload[0]= fl32[0];\n\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 450,
+        "y": 1740,
+        "wires": [
+            [
+                "08869ea46586dc2e"
+            ]
+        ]
+    },
+    {
+        "id": "6f67dfb77e9b6a5a",
+        "type": "inject",
+        "z": "00676439c2d60620",
+        "name": "",
+        "props": [
+            {
+                "p": "payload[0]",
+                "v": "0",
+                "vt": "num"
+            },
+            {
+                "p": "payload[1]",
+                "v": "17000",
+                "vt": "str"
+            }
+        ],
+        "repeat": "2",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "x": 150,
+        "y": 1620,
+        "wires": [
+            [
+                "369895735037c9d1"
+            ]
+        ]
+    },
+    {
+        "id": "183cfa6db2d09f01",
+        "type": "inject",
+        "z": "00676439c2d60620",
+        "name": "",
+        "props": [
+            {
+                "p": "payload[0]",
+                "v": "10",
+                "vt": "num"
+            },
+            {
+                "p": "payload[1]",
+                "v": "17000",
+                "vt": "num"
+            }
+        ],
+        "repeat": "2",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "x": 150,
+        "y": 1660,
+        "wires": [
+            [
+                "aba88d052a95f999"
+            ]
+        ]
+    },
+    {
+        "id": "f0dfc9891b248edb",
+        "type": "inject",
+        "z": "00676439c2d60620",
+        "name": "",
+        "props": [
+            {
+                "p": "payload[0]",
+                "v": "30",
+                "vt": "num"
+            },
+            {
+                "p": "payload[1]",
+                "v": "17000",
+                "vt": "num"
+            }
+        ],
+        "repeat": "2",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "x": 150,
+        "y": 1700,
+        "wires": [
+            [
+                "7166aaf8140b3874"
+            ]
+        ]
+    },
+    {
+        "id": "834dbf2a8cd01196",
+        "type": "inject",
+        "z": "00676439c2d60620",
+        "name": "",
+        "props": [
+            {
+                "p": "payload[0]",
+                "v": "40",
+                "vt": "num"
+            },
+            {
+                "p": "payload[1]",
+                "v": "17000",
+                "vt": "num"
+            }
+        ],
+        "repeat": "2",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "x": 150,
+        "y": 1740,
+        "wires": [
+            [
+                "ba17f5f264845fb5"
+            ]
+        ]
+    },
+    {
+        "id": "c0c12d6c03a7cc80",
+        "type": "ui_text",
+        "z": "00676439c2d60620",
+        "group": "8c9880861bc783ad",
+        "order": 2,
+        "width": 0,
+        "height": 0,
+        "name": "",
+        "label": "SUB 01_ ",
+        "format": "{{msg.payload}}",
+        "layout": "row-left",
+        "className": "",
+        "x": 980,
+        "y": 1660,
+        "wires": []
+    },
+    {
+        "id": "84509ca80130ee31",
+        "type": "ui_text",
+        "z": "00676439c2d60620",
+        "group": "8c9880861bc783ad",
+        "order": 3,
+        "width": 0,
+        "height": 0,
+        "name": "",
+        "label": "SUB 02_ ",
+        "format": "{{msg.payload}}",
+        "layout": "row-left",
+        "className": "",
+        "x": 980,
+        "y": 1700,
+        "wires": []
+    },
+    {
+        "id": "f6cbfe9ab0fe0f34",
+        "type": "ui_text",
+        "z": "00676439c2d60620",
+        "group": "8c9880861bc783ad",
+        "order": 4,
+        "width": 0,
+        "height": 0,
+        "name": "",
+        "label": "SUB 03_ ",
+        "format": "{{msg.payload}}",
+        "layout": "row-left",
+        "className": "",
+        "x": 980,
+        "y": 1740,
+        "wires": []
+    },
+    {
+        "id": "aba88d052a95f999",
+        "type": "function",
+        "z": "00676439c2d60620",
+        "name": "Convert byte 16bits to float 32",
+        "func": "var ui16 = new Uint16Array(msg.payload);\nvar fl32 = new Float32Array(ui16.buffer, ui16.byteOffset, ui16.byteLength / Float32Array.BYTES_PER_ELEMENT);\nmsg.payload[0]= fl32[0];\n\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 450,
+        "y": 1660,
+        "wires": [
+            [
+                "e48780245c668436"
+            ]
+        ]
+    },
+    {
+        "id": "a7025df94e06379a",
+        "type": "function",
+        "z": "00676439c2d60620",
+        "name": "Fator de potencia 69kV",
+        "func": "var payload = msg.payload;\nmsg.payload = (payload[0]);\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 750,
+        "y": 1620,
+        "wires": [
+            [
+                "d432e901cd42265e"
+            ]
+        ]
+    },
+    {
+        "id": "e48780245c668436",
+        "type": "function",
+        "z": "00676439c2d60620",
+        "name": "Fator de potencia 69kV",
+        "func": "var payload = msg.payload;\nmsg.payload = (payload[0]);\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 750,
+        "y": 1660,
+        "wires": [
+            [
+                "c0c12d6c03a7cc80"
+            ]
+        ]
+    },
+    {
+        "id": "a828dbcef579dae5",
+        "type": "function",
+        "z": "00676439c2d60620",
+        "name": "Fator de potencia 69kV",
+        "func": "var payload = msg.payload;\nmsg.payload = (payload[0]);\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 750,
+        "y": 1700,
+        "wires": [
+            [
+                "84509ca80130ee31"
+            ]
+        ]
+    },
+    {
+        "id": "08869ea46586dc2e",
+        "type": "function",
+        "z": "00676439c2d60620",
+        "name": "Fator de potencia 69kV",
+        "func": "var payload = msg.payload;\nmsg.payload = (payload[0]);\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 750,
+        "y": 1740,
+        "wires": [
+            [
+                "f6cbfe9ab0fe0f34"
+            ]
+        ]
+    },
+    {
+        "id": "d40e6270a87a2ab8",
+        "type": "modbus-read",
+        "z": "00676439c2d60620",
+        "name": "Consumo da 69kV em mW",
+        "topic": "",
+        "showStatusActivities": true,
+        "logIOActivities": false,
+        "showErrors": true,
+        "unitid": "1",
+        "dataType": "HoldingRegister",
+        "adr": "6140",
+        "quantity": "2",
+        "rate": "2",
+        "rateUnit": "s",
+        "delayOnStart": false,
+        "startDelayTime": "",
+        "server": "f2157ba6498170ca",
+        "useIOFile": false,
+        "ioFile": "",
+        "useIOForPayload": false,
+        "emptyMsgOnFail": true,
+        "x": 110,
+        "y": 1180,
+        "wires": [
+            [],
+            []
+        ],
+        "outputLabels": [
+            "MOTCP",
+            ""
+        ],
+        "info": "    IP: 172.23.130.35:502:1\n    type andress: FP:16\n    \n    CCK_Demanda_Ativa       \t0\t\t\n    CCK_Demanda_Reativa     \t2\t\t\n    CCK_Fator_Potencia      \t4\t\t\n    CCK_Energia_AI_UI       \t6\t\t\n    CCK_Energia_RI_UI\t        8\t\t\n    CCK_Demanda_Disp\t        10\t\t\n    CCK_Tensao_L_Trifasica\t    12\t\t\n    CCK_Floating_Reserva01\t    14\t\t\n    CCK_Floating_Reserva02\t    16\t\t\n    CCK_Floating_Reserva03\t    18\t\t\n    CCK_Corrente_L_Trifasica\t20\t\t\n    "
+    },
+    {
+        "id": "af5136d4ac46f239",
+        "type": "comment",
+        "z": "00676439c2d60620",
+        "name": "TESTE VALOR DAS CORRENTES",
+        "info": "Leitura de Energia da SubestaÃ§Ã£o 69KV - Medidor PowerLogic PM5110 ",
+        "x": 280,
+        "y": 1560,
+        "wires": []
+    },
+    {
+        "id": "7e749655e03fa4b5",
+        "type": "comment",
+        "z": "00676439c2d60620",
+        "name": "PIE CHART TESTE SUB-69kV",
+        "info": "Leitura de Energia da SubestaÃ§Ã£o 69KV - Medidor PowerLogic PM5110 ",
+        "x": 270,
+        "y": 1080,
+        "wires": []
+    },
+    {
+        "id": "f6c7921c70a4eaee",
+        "type": "ui_chart",
+        "z": "82e99e3d5e52fa12",
+        "name": "",
+        "group": "58ae76d6d77672d4",
+        "order": 2,
+        "width": "8",
+        "height": 4,
+        "label": "",
+        "chartType": "line",
+        "legend": "false",
+        "xformat": "HH:mm:ss",
+        "interpolate": "linear",
+        "nodata": "",
+        "dot": false,
+        "ymin": "0",
+        "ymax": "8000",
+        "removeOlder": "15",
+        "removeOlderPoints": "",
+        "removeOlderUnit": "60",
+        "cutout": 0,
+        "useOneColor": false,
+        "useUTC": false,
+        "colors": [
+            "#1f77b4",
+            "#aec7e8",
+            "#ff7f0e",
+            "#2ca02c",
+            "#98df8a",
+            "#d62728",
+            "#ff9896",
+            "#9467bd",
+            "#c5b0d5"
+        ],
+        "outputs": 1,
+        "useDifferentColor": false,
+        "className": "",
+        "x": 830,
+        "y": 400,
+        "wires": [
+            []
+        ],
+        "inputLabels": [
+            "IN_Pot Reativa Total 69kV"
+        ],
+        "outputLabels": [
+            "OUT_Pot Reativa Total 69kV"
+        ]
+    },
+    {
+        "id": "93ec795cbac5ba79",
+        "type": "ui_gauge",
+        "z": "82e99e3d5e52fa12",
+        "name": "",
+        "group": "e62055e3a362cb2f",
+        "order": 1,
+        "width": "8",
+        "height": 4,
+        "gtype": "gage",
+        "title": "",
+        "label": "kW",
+        "format": "{{value}}",
+        "min": 0,
+        "max": "7620",
+        "colors": [
+            "#c2c7c2",
+            "#4ad723",
+            "#ff0000"
+        ],
+        "seg1": "3500",
+        "seg2": "5000",
+        "className": "",
+        "x": 830,
+        "y": 160,
+        "wires": []
+    },
+    {
+        "id": "6a37abebc7b3fd58",
+        "type": "ui_gauge",
+        "z": "82e99e3d5e52fa12",
+        "name": "",
+        "group": "58ae76d6d77672d4",
+        "order": 1,
+        "width": "8",
+        "height": 4,
+        "gtype": "gage",
+        "title": "",
+        "label": "KwVAR",
+        "format": "{{value}}",
+        "min": 0,
+        "max": "8000",
+        "colors": [
+            "#c2c7c2",
+            "#4ad723",
+            "#ff0000"
+        ],
+        "seg1": "3500",
+        "seg2": "5000",
+        "className": "",
+        "x": 830,
+        "y": 480,
+        "wires": []
+    },
+    {
+        "id": "b0c74b1378f6d4d8",
+        "type": "modbus-read",
+        "z": "82e99e3d5e52fa12",
+        "name": "FLOATINGS_SUB-02 13.8KV",
+        "topic": "",
+        "showStatusActivities": true,
+        "logIOActivities": false,
+        "showErrors": true,
+        "unitid": "1",
+        "dataType": "HoldingRegister",
+        "adr": "64",
+        "quantity": "1",
+        "rate": "500",
+        "rateUnit": "ms",
+        "delayOnStart": false,
+        "startDelayTime": "",
+        "server": "f2157ba6498170ca",
+        "useIOFile": false,
+        "ioFile": "",
+        "useIOForPayload": false,
+        "emptyMsgOnFail": true,
+        "x": 160,
+        "y": 280,
+        "wires": [
+            [
+                "82f6245d40463da0",
+                "a35e436c32db9c5a",
+                "7f71d83e2331e22e"
+            ],
+            []
+        ],
+        "outputLabels": [
+            "MOTCP",
+            ""
+        ],
+        "info": "    IP: 172.23.130.35:502:1\n    type andress: FP:16\n    \n    CCK_Demanda_Ativa       \t0\t\t\n    CCK_Demanda_Reativa     \t2\t\t\n    CCK_Fator_Potencia      \t4\t\t\n    CCK_Energia_AI_UI       \t6\t\t\n    CCK_Energia_RI_UI\t        8\t\t\n    CCK_Demanda_Disp\t        10\t\t\n    CCK_Tensao_L_Trifasica\t    12\t\t\n    CCK_Floating_Reserva01\t    14\t\t\n    CCK_Floating_Reserva02\t    16\t\t\n    CCK_Floating_Reserva03\t    18\t\t\n    CCK_Corrente_L_Trifasica\t20\t\t\n    "
+    },
+    {
+        "id": "7f71d83e2331e22e",
+        "type": "function",
+        "z": "82e99e3d5e52fa12",
+        "name": "Demanda Média SUB-02 13.8kV",
+        "func": "var payload = msg.payload;\nmsg.payload = (payload[0]);\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 530,
+        "y": 120,
+        "wires": [
+            [
+                "93ec795cbac5ba79",
+                "1aed09a1475e9062"
+            ]
+        ]
+    },
+    {
+        "id": "82f6245d40463da0",
+        "type": "function",
+        "z": "82e99e3d5e52fa12",
+        "name": "Fator de Potência SUB-02 13.8kV ",
+        "func": "var payload = msg.payload;\nmsg.payload = (payload[1]);\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 540,
+        "y": 280,
+        "wires": [
+            [
+                "86c9629474745763",
+                "25a3045dbdae4d23"
+            ]
+        ]
+    },
+    {
+        "id": "86c9629474745763",
+        "type": "ui_chart",
+        "z": "82e99e3d5e52fa12",
+        "name": "",
+        "group": "1cba8527517310d3",
+        "order": 2,
+        "width": "9",
+        "height": 4,
+        "label": "",
+        "chartType": "line",
+        "legend": "false",
+        "xformat": "HH:mm:ss",
+        "interpolate": "linear",
+        "nodata": "",
+        "dot": false,
+        "ymin": "0",
+        "ymax": "2",
+        "removeOlder": "15",
+        "removeOlderPoints": "",
+        "removeOlderUnit": "60",
+        "cutout": 0,
+        "useOneColor": false,
+        "useUTC": false,
+        "colors": [
+            "#1f77b4",
+            "#aec7e8",
+            "#ff7f0e",
+            "#2ca02c",
+            "#98df8a",
+            "#d62728",
+            "#ff9896",
+            "#9467bd",
+            "#c5b0d5"
+        ],
+        "outputs": 1,
+        "useDifferentColor": false,
+        "className": "",
+        "x": 830,
+        "y": 240,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "25a3045dbdae4d23",
+        "type": "ui_gauge",
+        "z": "82e99e3d5e52fa12",
+        "name": "",
+        "group": "1cba8527517310d3",
+        "order": 1,
+        "width": "9",
+        "height": 4,
+        "gtype": "gage",
+        "title": "",
+        "label": "FB",
+        "format": "{{value}}",
+        "min": 0,
+        "max": "1.65",
+        "colors": [
+            "#e21d27",
+            "#4ad723",
+            "#ff0000"
+        ],
+        "seg1": "0.85",
+        "seg2": "1.1",
+        "className": "",
+        "x": 830,
+        "y": 320,
+        "wires": []
+    },
+    {
+        "id": "a35e436c32db9c5a",
+        "type": "function",
+        "z": "82e99e3d5e52fa12",
+        "name": "Demanda Reativa Total SUB-02 13.8kV",
+        "func": "var payload = msg.payload;\nmsg.payload = (payload[2]);\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 560,
+        "y": 440,
+        "wires": [
+            [
+                "f6c7921c70a4eaee",
+                "6a37abebc7b3fd58"
+            ]
+        ]
+    },
+    {
+        "id": "b26128a07568d911",
+        "type": "comment",
+        "z": "82e99e3d5e52fa12",
+        "name": "Leitura das Demandas da Subestação - 02 de 13.8kV ",
+        "info": "Leitura de Energia da SubestaÃ§Ã£o 69KV - Medidor PowerLogic PM5110 ",
+        "x": 340,
+        "y": 20,
+        "wires": []
+    },
+    {
+        "id": "1aed09a1475e9062",
+        "type": "ui_chart",
+        "z": "82e99e3d5e52fa12",
+        "name": "",
+        "group": "e62055e3a362cb2f",
+        "order": 2,
+        "width": "8",
+        "height": 4,
+        "label": "",
+        "chartType": "line",
+        "legend": "false",
+        "xformat": "HH:mm:ss",
+        "interpolate": "linear",
+        "nodata": "",
+        "dot": false,
+        "ymin": "0",
+        "ymax": "8000",
+        "removeOlder": "5",
+        "removeOlderPoints": "",
+        "removeOlderUnit": "60",
+        "cutout": 0,
+        "useOneColor": false,
+        "useUTC": false,
+        "colors": [
+            "#1f77b4",
+            "#aec7e8",
+            "#ff7f0e",
+            "#2ca02c",
+            "#98df8a",
+            "#d62728",
+            "#ff9896",
+            "#9467bd",
+            "#c5b0d5"
+        ],
+        "outputs": 1,
+        "useDifferentColor": false,
+        "className": "",
+        "x": 830,
+        "y": 80,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "4150fe99ae9036b6",
+        "type": "comment",
+        "z": "82e99e3d5e52fa12",
+        "name": "Leitura das Correntes da Subestação - 02 de 13.8kV",
+        "info": "Leitura de Energia da SubestaÃ§Ã£o 69KV - Medidor PowerLogic PM5110 ",
+        "x": 330,
+        "y": 600,
+        "wires": []
+    },
+    {
+        "id": "e8dbcf9a4db47953",
+        "type": "modbus-read",
+        "z": "82e99e3d5e52fa12",
+        "name": "Consumo da SUB-02 13.8kV em mW",
+        "topic": "",
+        "showStatusActivities": true,
+        "logIOActivities": false,
+        "showErrors": true,
+        "unitid": "1",
+        "dataType": "HoldingRegister",
+        "adr": "6140",
+        "quantity": "2",
+        "rate": "2",
+        "rateUnit": "s",
+        "delayOnStart": false,
+        "startDelayTime": "",
+        "server": "f2157ba6498170ca",
+        "useIOFile": false,
+        "ioFile": "",
+        "useIOForPayload": false,
+        "emptyMsgOnFail": true,
+        "x": 190,
+        "y": 680,
+        "wires": [
+            [],
+            []
+        ],
+        "outputLabels": [
+            "MOTCP",
+            ""
+        ],
+        "info": "    IP: 172.23.130.35:502:1\n    type andress: FP:16\n    \n    CCK_Demanda_Ativa       \t0\t\t\n    CCK_Demanda_Reativa     \t2\t\t\n    CCK_Fator_Potencia      \t4\t\t\n    CCK_Energia_AI_UI       \t6\t\t\n    CCK_Energia_RI_UI\t        8\t\t\n    CCK_Demanda_Disp\t        10\t\t\n    CCK_Tensao_L_Trifasica\t    12\t\t\n    CCK_Floating_Reserva01\t    14\t\t\n    CCK_Floating_Reserva02\t    16\t\t\n    CCK_Floating_Reserva03\t    18\t\t\n    CCK_Corrente_L_Trifasica\t20\t\t\n    "
+    },
+    {
+        "id": "a4453d2d970e0a44",
+        "type": "ui_chart",
+        "z": "82e99e3d5e52fa12",
+        "name": "",
+        "group": "075c74cb1166289e",
+        "order": 1,
+        "width": "20",
+        "height": 13,
+        "label": "",
+        "chartType": "bar",
+        "legend": "false",
+        "xformat": "HH:mm:ss",
+        "interpolate": "linear",
+        "nodata": "",
+        "dot": false,
+        "ymin": "0",
+        "ymax": "70",
+        "removeOlder": "15",
+        "removeOlderPoints": "",
+        "removeOlderUnit": "60",
+        "cutout": 0,
+        "useOneColor": true,
+        "useUTC": false,
+        "colors": [
+            "#1f78b7",
+            "#1f78b7",
+            "#1f78b7",
+            "#1f78b7",
+            "#1f78b7",
+            "#1f78b7",
+            "#1f78b7",
+            "#1f78b7",
+            "#1f78b7",
+            "#1f78b7",
+            "#1f78b7",
+            "#1f78b7",
+            "#1f78b7",
+            "#1f78b7",
+            "#1f78b7",
+            "#1f78b7",
+            "#1f78b7",
+            "#1f78b7",
+            "#1f78b7",
+            "#1f78b7",
+            "#1f78b7",
+            "#1f78b7",
+            "#1f78b7",
+            "#1f78b7",
+            "#1f78b7",
+            "#1f78b7",
+            "#1f78b7",
+            "#1f78b7",
+            "#1f78b7",
+            "#1f78b7",
+            "#1f78b7",
+            "#1f78b7"
+            
+        ],
+        "outputs": 1,
+        "useDifferentColor": false,
+        "className": "",
+        "x": 950,
+        "y": 680,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "8910ee7eb8aa2439",
+        "type": "function",
+        "z": "82e99e3d5e52fa12",
+        "name": "ConcatenaÃ§Ã£o das correntes SUB-02 13.8kV",
+        "func": "var payload = msg.payload;\n\nvar m={};\nm.labels = [\"Consumo em megaWatt\"];\nm.series = ['megaWatt dia 1', 'mW dia 2', 'mW dia 3','mW dia 4','mW dia 5','mW dia 6','mW dia 7','mW dia 8','mW dia 9','mW dia 10','mW dia 11','mW dia 12','mW dia 13','mW dia 14','mW dia 15','mW dia 16','mW dia 17','mW dia 18','mW dia 19','mW dia 20','mW dia 21','mW dia 22','mW dia 23','mW dia 24','mW dia 25','mW dia 26','mW dia 27','mW dia 28','mW dia 29','mW dia 30','mW dia 31'];\nm.data = [\n    [payload[0] ],\n    [payload[1] ],\n    [payload[2] ],\n    [payload[3] ],\n    [payload[4] ],\n    [payload[5] ],\n    [payload[6] ],\n    [payload[7] ],\n    [payload[8] ],\n    [payload[9] ],\n    [payload[10] ],\n    [payload[11] ],\n    [payload[12] ],\n    [payload[13] ],\n    [payload[14] ],\n    [payload[15] ],\n    [payload[16] ],\n    [payload[17] ],\n    [payload[18] ],\n    [payload[19] ],\n    [payload[20] ],\n    [payload[21] ],\n    [payload[22] ],\n    [payload[23] ], \n    [payload[24] ],\n    [payload[25] ],\n    [payload[26] ],\n    [payload[27] ],\n    [payload[28] ],\n    [payload[29] ],\n    [payload[30] ],\n    [payload[31] ],\n\n  ];\n  return {payload:[m]};",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 620,
+        "y": 680,
+        "wires": [
+            [
+                "a4453d2d970e0a44"
+            ]
+        ]
+    },
+    {
+        "id": "fbeef9da25c0333c",
+        "type": "inject",
+        "z": "82e99e3d5e52fa12",
+        "name": "",
+        "props": [
+            {
+                "p": "payload[0]",
+                "v": "0",
+                "vt": "num"
+            },
+            {
+                "p": "payload[1]",
+                "v": "17000",
+                "vt": "num"
+            },
+            {
+                "p": "payload[2]",
+                "v": "10",
+                "vt": "num"
+            },
+            {
+                "p": "payload[3]",
+                "v": "17000",
+                "vt": "num"
+            },
+            {
+                "p": "payload[4]",
+                "v": "20",
+                "vt": "num"
+            },
+            {
+                "p": "payload[5]",
+                "v": "17000",
+                "vt": "num"
+            },
+            {
+                "p": "payload[6]",
+                "v": "30",
+                "vt": "num"
+            },
+            {
+                "p": "payload[7]",
+                "v": "17000",
+                "vt": "num"
+            },
+            {
+                "p": "payload[8]",
+                "v": "40",
+                "vt": "num"
+            },
+            {
+                "p": "payload[9]",
+                "v": "17000",
+                "vt": "num"
+            },
+            {
+                "p": "payload[10]",
+                "v": "50",
+                "vt": "num"
+            },
+            {
+                "p": "payload[11]",
+                "v": "17000",
+                "vt": "num"
+            },
+            {
+                "p": "payload[12]",
+                "v": "60",
+                "vt": "num"
+            },
+            {
+                "p": "payload[13]",
+                "v": "17000",
+                "vt": "num"
+            },
+            {
+                "p": "payload[14]",
+                "v": "70",
+                "vt": "num"
+            },
+            {
+                "p": "payload[15]",
+                "v": "17000",
+                "vt": "num"
+            },
+            {
+                "p": "payload[16]",
+                "v": "80",
+                "vt": "num"
+            },
+            {
+                "p": "payload[17]",
+                "v": "17000",
+                "vt": "num"
+            },
+            {
+                "p": "payload[18]",
+                "v": "90",
+                "vt": "num"
+            },
+            {
+                "p": "payload[19]",
+                "v": "17000",
+                "vt": "num"
+            },
+            {
+                "p": "payload[20]",
+                "v": "100",
+                "vt": "num"
+            },
+            {
+                "p": "payload[21]",
+                "v": "17000",
+                "vt": "num"
+            },
+            {
+                "p": "payload[22]",
+                "v": "110",
+                "vt": "num"
+            },
+            {
+                "p": "payload[23]",
+                "v": "17000",
+                "vt": "num"
+            },
+            {
+                "p": "payload[24]",
+                "v": "120",
+                "vt": "num"
+            },
+            {
+                "p": "payload[25]",
+                "v": "17000",
+                "vt": "num"
+            },
+            {
+                "p": "payload[26]",
+                "v": "130",
+                "vt": "num"
+            },
+            {
+                "p": "payload[27]",
+                "v": "17000",
+                "vt": "num"
+            },
+            {
+                "p": "payload[28]",
+                "v": "140",
+                "vt": "num"
+            },
+            {
+                "p": "payload[29]",
+                "v": "17000",
+                "vt": "num"
+            },
+            {
+                "p": "payload[30]",
+                "v": "150",
+                "vt": "num"
+            },
+            {
+                "p": "payload[31]",
+                "v": "17000",
+                "vt": "num"
+            },
+            {
+                "p": "payload[32]",
+                "v": "160",
+                "vt": "num"
+            },
+            {
+                "p": "payload[33]",
+                "v": "17000",
+                "vt": "num"
+            },
+            {
+                "p": "payload[34]",
+                "v": "170",
+                "vt": "num"
+            },
+            {
+                "p": "payload[35]",
+                "v": "17000",
+                "vt": "num"
+            },
+            {
+                "p": "payload[36]",
+                "v": "180",
+                "vt": "num"
+            },
+            {
+                "p": "payload[37]",
+                "v": "17000",
+                "vt": "num"
+            },
+            {
+                "p": "payload[38]",
+                "v": "190",
+                "vt": "num"
+            },
+            {
+                "p": "payload[39]",
+                "v": "17000",
+                "vt": "num"
+            },
+            {
+                "p": "payload[40]",
+                "v": "200",
+                "vt": "num"
+            },
+            {
+                "p": "payload[41]",
+                "v": "17000",
+                "vt": "num"
+            },
+            {
+                "p": "payload[42]",
+                "v": "210",
+                "vt": "num"
+            },
+            {
+                "p": "payload[43]",
+                "v": "17000",
+                "vt": "num"
+            },
+            {
+                "p": "payload[44]",
+                "v": "220",
+                "vt": "num"
+            },
+            {
+                "p": "payload[45]",
+                "v": "17000",
+                "vt": "num"
+            },
+            {
+                "p": "payload[46]",
+                "v": "230",
+                "vt": "num"
+            },
+            {
+                "p": "payload[47]",
+                "v": "17000",
+                "vt": "num"
+            },
+            {
+                "p": "payload[48]",
+                "v": "240",
+                "vt": "num"
+            },
+            {
+                "p": "payload[49]",
+                "v": "17000",
+                "vt": "num"
+            },
+            {
+                "p": "payload[50]",
+                "v": "250",
+                "vt": "num"
+            },
+            {
+                "p": "payload[51]",
+                "v": "17000",
+                "vt": "num"
+            },
+            {
+                "p": "payload[52]",
+                "v": "260",
+                "vt": "num"
+            },
+            {
+                "p": "payload[53]",
+                "v": "17000",
+                "vt": "num"
+            },
+            {
+                "p": "payload[54]",
+                "v": "270",
+                "vt": "num"
+            },
+            {
+                "p": "payload[55]",
+                "v": "17000",
+                "vt": "num"
+            },
+            {
+                "p": "payload[56]",
+                "v": "280",
+                "vt": "num"
+            },
+            {
+                "p": "payload[57]",
+                "v": "17000",
+                "vt": "num"
+            },
+            {
+                "p": "payload[58]",
+                "v": "290",
+                "vt": "num"
+            },
+            {
+                "p": "payload[59]",
+                "v": "17000",
+                "vt": "num"
+            },
+            {
+                "p": "payload[60]",
+                "v": "300",
+                "vt": "num"
+            },
+            {
+                "p": "payload[61]",
+                "v": "17000",
+                "vt": "num"
+            }
+        ],
+        "repeat": "2",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "x": 270,
+        "y": 780,
+        "wires": [
+            [
+                "11ababd9c8b19a0e",
+                "087deae54e5c97e1"
+            ]
+        ]
+    },
+    {
+        "id": "85307a7aa8497e68",
+        "type": "debug",
+        "z": "82e99e3d5e52fa12",
+        "name": "",
+        "active": false,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "payload",
+        "targetType": "msg",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 970,
+        "y": 820,
+        "wires": []
+    },
+    {
+        "id": "11ababd9c8b19a0e",
+        "type": "function",
+        "z": "82e99e3d5e52fa12",
+        "name": "Convert byte 16bits to float 32 SUB-02 13.8kV",
+        "func": "var ui16 = new Uint16Array(msg.payload);\nvar fl32 = new Float32Array(ui16.buffer, ui16.byteOffset, ui16.byteLength / Float32Array.BYTES_PER_ELEMENT);\nmsg.payload[0]= fl32[0];\nmsg.payload[1]= fl32[1];\nmsg.payload[2]= fl32[2];\nmsg.payload[3]= fl32[3]\nmsg.payload[4]= fl32[4]\nmsg.payload[5]= fl32[5]\nmsg.payload[6]= fl32[6]\nmsg.payload[7]= fl32[7]\nmsg.payload[8]= fl32[8]\nmsg.payload[9]= fl32[9]\nmsg.payload[10]= fl32[10]\nmsg.payload[11]= fl32[11]\nmsg.payload[12]= fl32[12]\nmsg.payload[13]= fl32[13]\nmsg.payload[14]= fl32[14]\nmsg.payload[15]= fl32[15]\nmsg.payload[16]= fl32[16]\nmsg.payload[17]= fl32[17]\nmsg.payload[18]= fl32[18]\nmsg.payload[19]= fl32[19]\nmsg.payload[20]= fl32[20]\nmsg.payload[21]= fl32[21]\nmsg.payload[22]= fl32[22]\nmsg.payload[23]= fl32[23]\nmsg.payload[24]= fl32[24]\nmsg.payload[25]= fl32[25]\nmsg.payload[26]= fl32[26]\nmsg.payload[27]= fl32[27]\nmsg.payload[28]= fl32[28]\nmsg.payload[29]= fl32[29]\nmsg.payload[30]= fl32[30]\nmsg.payload[31]= fl32[31]\n\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 620,
+        "y": 820,
+        "wires": [
+            [
+                "85307a7aa8497e68",
+                "8910ee7eb8aa2439"
+            ]
+        ]
+    },
+    {
+        "id": "087deae54e5c97e1",
+        "type": "debug",
+        "z": "82e99e3d5e52fa12",
+        "name": "",
+        "active": false,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "payload",
+        "targetType": "msg",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 510,
+        "y": 880,
+        "wires": []
+    },
+    {
+        "id": "aafbcaf256967667",
+        "type": "ui_chart",
+        "z": "82e99e3d5e52fa12",
+        "name": "pie chart",
+        "group": "ad7055a2cb85ebf3",
+        "order": 1,
+        "width": "8",
+        "height": 8,
+        "label": "",
+        "chartType": "pie",
+        "legend": "true",
+        "xformat": "HH:mm:ss",
+        "interpolate": "linear",
+        "nodata": "",
+        "dot": false,
+        "ymin": "",
+        "ymax": "",
+        "removeOlder": 1,
+        "removeOlderPoints": "",
+        "removeOlderUnit": "3600",
+        "cutout": "25",
+        "useOneColor": false,
+        "useUTC": false,
+        "colors": [
+            "#1f77b4",
+            "#aec7e8",
+            "#ff7f0e",
+            "#2ca02c",
+            "#98df8a",
+            "#d62728",
+            "#ff9896",
+            "#9467bd",
+            "#c5b0d5"
+        ],
+        "outputs": 1,
+        "useDifferentColor": false,
+        "className": "",
+        "x": 1040,
+        "y": 1120,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "d50e63da3e0b950f",
+        "type": "function",
+        "z": "82e99e3d5e52fa12",
+        "name": "ConcatenaÃ§Ã£o das correntes SUB-02 13.8kV",
+        "func": "var payload = msg.payload;\n\nvar m={};\nm.labels = [\"Consumo em megaWatt\"];\nm.series = ['megaWatt dia 1', 'mW dia 2', 'mW dia 3','mW dia 4','mW dia 5','mW dia 6','mW dia 7','mW dia 8','mW dia 9','mW dia 10','mW dia 11','mW dia 12','mW dia 13','mW dia 14','mW dia 15','mW dia 16','mW dia 17','mW dia 18','mW dia 19','mW dia 20','mW dia 21','mW dia 22','mW dia 23','mW dia 24','mW dia 25','mW dia 26','mW dia 27','mW dia 28','mW dia 29','mW dia 30','mW dia 31'];\nm.data = [\n    [payload[0] ],\n    [payload[1] ],\n    [payload[2] ],\n    [payload[3] ],\n\n  ];\n  return {payload:[m]};",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 540,
+        "y": 1120,
+        "wires": [
+            [
+                "1b55b0b1ff6adffc"
+            ]
+        ]
+    },
+    {
+        "id": "90e8d99b698d76ba",
+        "type": "inject",
+        "z": "82e99e3d5e52fa12",
+        "name": "",
+        "props": [
+            {
+                "p": "payload[0]",
+                "v": "0",
+                "vt": "num"
+            },
+            {
+                "p": "payload[1]",
+                "v": "17000",
+                "vt": "num"
+            },
+            {
+                "p": "payload[2]",
+                "v": "10",
+                "vt": "num"
+            },
+            {
+                "p": "payload[3]",
+                "v": "17000",
+                "vt": "num"
+            },
+            {
+                "p": "payload[4]",
+                "v": "20",
+                "vt": "num"
+            },
+            {
+                "p": "payload[5]",
+                "v": "17000",
+                "vt": "num"
+            },
+            {
+                "p": "payload[6]",
+                "v": "30",
+                "vt": "num"
+            },
+            {
+                "p": "payload[7]",
+                "v": "17000",
+                "vt": "num"
+            }
+        ],
+        "repeat": "2",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "x": 190,
+        "y": 1220,
+        "wires": [
+            [
+                "d2117d722c25e878",
+                "a5140d1bc8a7deda"
+            ]
+        ]
+    },
+    {
+        "id": "9c3ef788a140b30d",
+        "type": "debug",
+        "z": "82e99e3d5e52fa12",
+        "name": "",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "payload",
+        "targetType": "msg",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 1010,
+        "y": 1260,
+        "wires": []
+    },
+    {
+        "id": "d2117d722c25e878",
+        "type": "function",
+        "z": "82e99e3d5e52fa12",
+        "name": "Convert byte 16bits to float 32 SUB-02 13.8kV",
+        "func": "var ui16 = new Uint16Array(msg.payload);\nvar fl32 = new Float32Array(ui16.buffer, ui16.byteOffset, ui16.byteLength / Float32Array.BYTES_PER_ELEMENT);\nmsg.payload[0]= fl32[0];\nmsg.payload[1]= fl32[1];\nmsg.payload[2]= fl32[2];\nmsg.payload[3]= fl32[3]\n\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 540,
+        "y": 1260,
+        "wires": [
+            [
+                "9c3ef788a140b30d",
+                "d50e63da3e0b950f"
+            ]
+        ]
+    },
+    {
+        "id": "a5140d1bc8a7deda",
+        "type": "debug",
+        "z": "82e99e3d5e52fa12",
+        "name": "",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "payload",
+        "targetType": "msg",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 430,
+        "y": 1320,
+        "wires": []
+    },
+    {
+        "id": "1b55b0b1ff6adffc",
+        "type": "function",
+        "z": "82e99e3d5e52fa12",
+        "name": "",
+        "func": "var m={\n    \"series\":[\"xxx\"],\n    \"data\":[[25,25,25,25]],\n    \"labels\":[\"SUB_69kVA\",\"SUB_01\",\"SUB_02\",\"SUB_03\"]\n};\nreturn {payload:[m]};",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 840,
+        "y": 1120,
+        "wires": [
+            [
+                "aafbcaf256967667"
+            ]
+        ]
+    },
+    {
+        "id": "bf49a9a0040f5bbf",
+        "type": "comment",
+        "z": "82e99e3d5e52fa12",
+        "name": "PIE CHART TESTE SUB-02 DE 13.8kV",
+        "info": "Leitura de Energia da SubestaÃ§Ã£o 69KV - Medidor PowerLogic PM5110 ",
+        "x": 290,
+        "y": 1040,
+        "wires": []
     }
 ]
